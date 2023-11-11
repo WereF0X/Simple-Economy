@@ -18,7 +18,6 @@ public class PayProcedureProcedure {
 			return;
 		Entity Sender = null;
 		if ((entity.getCapability(EasyEconomyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EasyEconomyModVariables.PlayerVariables())).Money >= DoubleArgumentType.getDouble(arguments, "amount")) {
-			Sender = entity;
 			{
 				double _setval = (entity.getCapability(EasyEconomyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EasyEconomyModVariables.PlayerVariables())).Money - DoubleArgumentType.getDouble(arguments, "amount");
 				entity.getCapability(EasyEconomyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -81,7 +80,7 @@ public class PayProcedureProcedure {
 					}
 				}
 			}.getEntity()) instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal((Sender + " sent you " + DoubleArgumentType.getDouble(arguments, "amount") + "$!")), false);
+				_player.displayClientMessage(Component.literal((entity.getDisplayName().getString() + " sent you " + DoubleArgumentType.getDouble(arguments, "amount") + "$!")), false);
 		} else {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(
