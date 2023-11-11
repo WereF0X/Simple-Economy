@@ -18,59 +18,7 @@ public class PayProcedureProcedure {
 			return;
 		Entity Sender = null;
 		if ((entity.getCapability(EasyEconomyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EasyEconomyModVariables.PlayerVariables())).Money >= DoubleArgumentType.getDouble(arguments, "amount")) {
-			{
-				double _setval = (entity.getCapability(EasyEconomyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EasyEconomyModVariables.PlayerVariables())).Money - DoubleArgumentType.getDouble(arguments, "amount");
-				entity.getCapability(EasyEconomyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Money = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(("You successfully sent " + (new Object() {
-					public Entity getEntity() {
-						try {
-							return EntityArgument.getEntity(arguments, "player");
-						} catch (CommandSyntaxException e) {
-							e.printStackTrace();
-							return null;
-						}
-					}
-				}.getEntity()).getDisplayName().getString() + " " + DoubleArgumentType.getDouble(arguments, "amount") + "$!")), false);
-			{
-				double _setval = ((new Object() {
-					public Entity getEntity() {
-						try {
-							return EntityArgument.getEntity(arguments, "player");
-						} catch (CommandSyntaxException e) {
-							e.printStackTrace();
-							return null;
-						}
-					}
-				}.getEntity()).getCapability(EasyEconomyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EasyEconomyModVariables.PlayerVariables())).Money + DoubleArgumentType.getDouble(arguments, "amount");
-				(new Object() {
-					public Entity getEntity() {
-						try {
-							return EntityArgument.getEntity(arguments, "player");
-						} catch (CommandSyntaxException e) {
-							e.printStackTrace();
-							return null;
-						}
-					}
-				}.getEntity()).getCapability(EasyEconomyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Money = _setval;
-					capability.syncPlayerVariables((new Object() {
-						public Entity getEntity() {
-							try {
-								return EntityArgument.getEntity(arguments, "player");
-							} catch (CommandSyntaxException e) {
-								e.printStackTrace();
-								return null;
-							}
-						}
-					}.getEntity()));
-				});
-			}
-			if ((new Object() {
+			if (entity == (new Object() {
 				public Entity getEntity() {
 					try {
 						return EntityArgument.getEntity(arguments, "player");
@@ -79,8 +27,74 @@ public class PayProcedureProcedure {
 						return null;
 					}
 				}
-			}.getEntity()) instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal((entity.getDisplayName().getString() + " sent you " + DoubleArgumentType.getDouble(arguments, "amount") + "$!")), false);
+			}.getEntity())) {
+				if (entity instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal("You can't pay yourself!"), false);
+			} else {
+				{
+					double _setval = (entity.getCapability(EasyEconomyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EasyEconomyModVariables.PlayerVariables())).Money - DoubleArgumentType.getDouble(arguments, "amount");
+					entity.getCapability(EasyEconomyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Money = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				if (entity instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal(("You successfully sent " + (new Object() {
+						public Entity getEntity() {
+							try {
+								return EntityArgument.getEntity(arguments, "player");
+							} catch (CommandSyntaxException e) {
+								e.printStackTrace();
+								return null;
+							}
+						}
+					}.getEntity()).getDisplayName().getString() + " " + DoubleArgumentType.getDouble(arguments, "amount") + "$!")), false);
+				{
+					double _setval = ((new Object() {
+						public Entity getEntity() {
+							try {
+								return EntityArgument.getEntity(arguments, "player");
+							} catch (CommandSyntaxException e) {
+								e.printStackTrace();
+								return null;
+							}
+						}
+					}.getEntity()).getCapability(EasyEconomyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new EasyEconomyModVariables.PlayerVariables())).Money + DoubleArgumentType.getDouble(arguments, "amount");
+					(new Object() {
+						public Entity getEntity() {
+							try {
+								return EntityArgument.getEntity(arguments, "player");
+							} catch (CommandSyntaxException e) {
+								e.printStackTrace();
+								return null;
+							}
+						}
+					}.getEntity()).getCapability(EasyEconomyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Money = _setval;
+						capability.syncPlayerVariables((new Object() {
+							public Entity getEntity() {
+								try {
+									return EntityArgument.getEntity(arguments, "player");
+								} catch (CommandSyntaxException e) {
+									e.printStackTrace();
+									return null;
+								}
+							}
+						}.getEntity()));
+					});
+				}
+				if ((new Object() {
+					public Entity getEntity() {
+						try {
+							return EntityArgument.getEntity(arguments, "player");
+						} catch (CommandSyntaxException e) {
+							e.printStackTrace();
+							return null;
+						}
+					}
+				}.getEntity()) instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal((entity.getDisplayName().getString() + " sent you " + DoubleArgumentType.getDouble(arguments, "amount") + "$!")), false);
+			}
 		} else {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(
