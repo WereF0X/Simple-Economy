@@ -26,7 +26,7 @@ public class PayProcedureProcedure {
 				});
 			}
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal(("You successfully sent " + new Object() {
+				_player.displayClientMessage(Component.literal(("You successfully sent " + (new Object() {
 					public Entity getEntity() {
 						try {
 							return EntityArgument.getEntity(arguments, "player");
@@ -35,7 +35,7 @@ public class PayProcedureProcedure {
 							return null;
 						}
 					}
-				}.getEntity() + " " + DoubleArgumentType.getDouble(arguments, "amount") + "$!")), false);
+				}.getEntity()).getDisplayName().getString() + " " + DoubleArgumentType.getDouble(arguments, "amount") + "$!")), false);
 			{
 				double _setval = ((new Object() {
 					public Entity getEntity() {
