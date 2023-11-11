@@ -1,0 +1,64 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_buy_x64",
+          "text": "Buy x64",
+          "onClick": {
+            "name": "BuyEmeraldx64"
+          },
+          "width": 61,
+          "height": 20,
+          "x": 185,
+          "y": 130
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_buy_x1",
+          "text": "Buy x1",
+          "onClick": {
+            "name": "BuyEmerald"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 187,
+          "y": 76
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_back",
+          "text": "Back",
+          "onClick": {
+            "name": "BackToIronGUI"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 128,
+          "y": 39
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 273,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_shop",
+          "text": {
+            "fixedValue": "SHOP"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 207,
+          "y": 41
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_ores",
+          "text": "Ores",
+          "onClick": {
+            "name": "OpenOresGUI"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 112,
+          "y": 84
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_blocks",
+          "text": "Blocks",
+          "width": 56,
+          "height": 20,
+          "x": 189,
+          "y": 84
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_pvp",
+          "text": "PvP",
+          "width": 40,
+          "height": 20,
+          "x": 277,
+          "y": 85
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_miscellaneous",
+          "text": "Miscellaneous",
+          "width": 93,
+          "height": 20,
+          "x": 118,
+          "y": 135
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_food",
+          "text": "Food",
+          "width": 46,
+          "height": 20,
+          "x": 241,
+          "y": 135
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_balance",
+          "text": "Balance",
+          "onClick": {
+            "name": "TellMoney"
+          },
+          "width": 61,
+          "height": 20,
+          "x": 78,
+          "y": 182
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

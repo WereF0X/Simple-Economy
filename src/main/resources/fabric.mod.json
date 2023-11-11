@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "easy_economy",
+  "version": "1.0.0",
+  "name": "Easy Economy",
+  "description": "Introduces a simple economy addon in your game. To sell items, do /sell. To buy items, do /shop. To see your balance, do /balance. Admins can do /balance:set (player) (amount) to set a player(s) balance to a  certain amount.",
+  "authors": [
+    "feder, MCreator"
+  ],
+  "contact": {
+    "homepage": "https://mcreator.net",
+    "sources": ""
+  },
+  "license": "All Rights Reserved",
+  "icon": "assets/easy_economy/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.mcreator.easyeconomy.EasyEconomyMod"
+    ],
+    "client": [
+      "net.mcreator.easyeconomy.ClientInit"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "fabric": "*",
+    "minecraft": "~1.20",
+    "java": ">=17"
+  }
+}

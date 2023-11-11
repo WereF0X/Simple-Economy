@@ -1,0 +1,64 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_back",
+          "text": "Back",
+          "onClick": {
+            "name": "OpenOresGUI"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 128,
+          "y": 40
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_netherite_scrap",
+          "text": "Netherite Scrap",
+          "onClick": {
+            "name": "OpenNetheriteScrapGUI"
+          },
+          "width": 103,
+          "height": 20,
+          "x": 162,
+          "y": 78
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_netherite_ingot",
+          "text": "Netherite Ingot",
+          "onClick": {
+            "name": "OpenNetheriteIngotGUI"
+          },
+          "width": 103,
+          "height": 20,
+          "x": 162,
+          "y": 129
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

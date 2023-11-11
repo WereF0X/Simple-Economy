@@ -1,0 +1,6 @@
+{
+  "pack": {
+    "pack_format": 15,
+    "description": "Introduces a simple economy addon in your game. To sell items, do /sell. To buy items, do /shop. To see your balance, do /balance. Admins can do /balance:set (player) (amount) to set a player(s) balance to a  certain amount."
+  }
+}
