@@ -1,0 +1,1587 @@
+{
+  "mod_elements": [
+    {
+      "name": "SellProcedure",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sell_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/SellProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Sell",
+      "type": "command",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sell",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/command/SellCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "TellMoney",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tell_money",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/TellMoneyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Balance",
+      "type": "command",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "balance",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/command/BalanceCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "ShopGUI",
+      "type": "gui",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shop_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/ShopGUIScreen.java",
+          "src/main/java/net/mcreator/simpleeconomy/network/ShopGUIButtonMessage.java",
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/ShopGUIMenu.java"
+        ]
+      }
+    },
+    {
+      "name": "ShopProcedure",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shop_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/ShopProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Ores",
+      "type": "gui",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ores",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/network/OresButtonMessage.java",
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/OresScreen.java",
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/OresMenu.java"
+        ]
+      }
+    },
+    {
+      "name": "OpenOresGUI",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_ores_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/OpenOresGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CoalGUI",
+      "type": "gui",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/CoalGUIScreen.java",
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/CoalGUIMenu.java",
+          "src/main/java/net/mcreator/simpleeconomy/network/CoalGUIButtonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "BuyCoal",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_coal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/BuyCoalProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CoalBuyGUI",
+      "type": "gui",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coal_buy_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/CoalBuyGUIScreen.java",
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/CoalBuyGUIMenu.java",
+          "src/main/java/net/mcreator/simpleeconomy/network/CoalBuyGUIButtonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "BuyCoalx64",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_coalx_64",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/BuyCoalx64Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BackToCoalGUI",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "back_to_coal_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/BackToCoalGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "IronGUI",
+      "type": "gui",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/network/IronGUIButtonMessage.java",
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/IronGUIMenu.java",
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/IronGUIScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "IronBuyGUI",
+      "type": "gui",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_buy_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/network/IronBuyGUIButtonMessage.java",
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/IronBuyGUIScreen.java",
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/IronBuyGUIMenu.java"
+        ]
+      }
+    },
+    {
+      "name": "OpenCoalBuyGUI",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_coal_buy_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/OpenCoalBuyGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BuyIron",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_iron",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/BuyIronProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BuyIronx64",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_ironx_64",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/BuyIronx64Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BackToIronGUI",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "back_to_iron_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/BackToIronGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GoldGUI",
+      "type": "gui",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gold_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/GoldGUIMenu.java",
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/GoldGUIScreen.java",
+          "src/main/java/net/mcreator/simpleeconomy/network/GoldGUIButtonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "OpenIronBuyGUI",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_iron_buy_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/OpenIronBuyGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GoldBuyGUI",
+      "type": "gui",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gold_buy_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/GoldBuyGUIMenu.java",
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/GoldBuyGUIScreen.java",
+          "src/main/java/net/mcreator/simpleeconomy/network/GoldBuyGUIButtonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "BuyGold",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_gold",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/BuyGoldProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BuyGoldx64",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_goldx_64",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/BuyGoldx64Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OpenGoldBuyGUI",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_gold_buy_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/OpenGoldBuyGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BackToGoldGUI",
+      "type": "procedure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "back_to_gold_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/BackToGoldGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shop",
+      "type": "command",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shop",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/command/ShopCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "SetBalanceOnCommand",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_balance_on_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/SetBalanceOnCommandProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BalanceSet",
+      "type": "command",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "balance_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/command/BalanceSetCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "EmeraldGUI",
+      "type": "gui",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "emerald_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/EmeraldGUIScreen.java",
+          "src/main/java/net/mcreator/simpleeconomy/network/EmeraldGUIButtonMessage.java",
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/EmeraldGUIMenu.java"
+        ]
+      }
+    },
+    {
+      "name": "EmeraldBuyGUI",
+      "type": "gui",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "emerald_buy_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/EmeraldBuyGUIMenu.java",
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/EmeraldBuyGUIScreen.java",
+          "src/main/java/net/mcreator/simpleeconomy/network/EmeraldBuyGUIButtonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "BuyEmerald",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_emerald",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/BuyEmeraldProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BuyEmeraldx64",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_emeraldx_64",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/BuyEmeraldx64Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OpenEmeraldBuyGUI",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_emerald_buy_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/OpenEmeraldBuyGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OpenEmeraldGUI",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_emerald_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/OpenEmeraldGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DiamondGUI",
+      "type": "gui",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamond_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/DiamondGUIMenu.java",
+          "src/main/java/net/mcreator/simpleeconomy/network/DiamondGUIButtonMessage.java",
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/DiamondGUIScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "DiamondBuyGUI",
+      "type": "gui",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamond_buy_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/DiamondBuyGUIScreen.java",
+          "src/main/java/net/mcreator/simpleeconomy/network/DiamondBuyGUIButtonMessage.java",
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/DiamondBuyGUIMenu.java"
+        ]
+      }
+    },
+    {
+      "name": "OpenDiamondBuyGUI",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_diamond_buy_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/OpenDiamondBuyGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OpenDiamondGUI",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_diamond_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/OpenDiamondGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BuyDiamond",
+      "type": "procedure",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_diamond",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/BuyDiamondProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BuyDiamondx64",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_diamondx_64",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/BuyDiamondx64Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NetheriteGUI",
+      "type": "gui",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/NetheriteGUIMenu.java",
+          "src/main/java/net/mcreator/simpleeconomy/network/NetheriteGUIButtonMessage.java",
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/NetheriteGUIScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "NetheriteScrapGUI",
+      "type": "gui",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_scrap_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/NetheriteScrapGUIScreen.java",
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/NetheriteScrapGUIMenu.java",
+          "src/main/java/net/mcreator/simpleeconomy/network/NetheriteScrapGUIButtonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "OpenNetheriteScrapGUI",
+      "type": "procedure",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_netherite_scrap_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/OpenNetheriteScrapGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NetheriteScrapBuyGUI",
+      "type": "gui",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_scrap_buy_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/network/NetheriteScrapBuyGUIButtonMessage.java",
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/NetheriteScrapBuyGUIMenu.java",
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/NetheriteScrapBuyGUIScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "BuyNetheriteScrap",
+      "type": "procedure",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_netherite_scrap",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/BuyNetheriteScrapProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BuyNetheriteScrapx64",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_netherite_scrapx_64",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/BuyNetheriteScrapx64Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OpenNetheriteScrapBuyGUI",
+      "type": "procedure",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_netherite_scrap_buy_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/OpenNetheriteScrapBuyGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OpenNetheriteGUI",
+      "type": "procedure",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_netherite_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/OpenNetheriteGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NetheriteIngotGUI",
+      "type": "gui",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_ingot_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/NetheriteIngotGUIScreen.java",
+          "src/main/java/net/mcreator/simpleeconomy/network/NetheriteIngotGUIButtonMessage.java",
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/NetheriteIngotGUIMenu.java"
+        ]
+      }
+    },
+    {
+      "name": "NetheriteIngotBuyGUI",
+      "type": "gui",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_ingot_buy_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/NetheriteIngotBuyGUIMenu.java",
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/NetheriteIngotBuyGUIScreen.java",
+          "src/main/java/net/mcreator/simpleeconomy/network/NetheriteIngotBuyGUIButtonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "OpenNetheriteIngotGUI",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_netherite_ingot_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/OpenNetheriteIngotGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OpenNetheriteIngotBuyGUI",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_netherite_ingot_buy_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/OpenNetheriteIngotBuyGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BuyNetheriteIngot",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_netherite_ingot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/BuyNetheriteIngotProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BuyNetheriteIngotx64",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buy_netherite_ingotx_64",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/BuyNetheriteIngotx64Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PayProcedure",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pay_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/PayProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Pay",
+      "type": "command",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/command/PayCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "MaximumBalance",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maximum_balance",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/MaximumBalanceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MaximumBalanceSet",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maximum_balance_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/MaximumBalanceSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MaximumBalanceCommand",
+      "type": "command",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "maximum_balance_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/command/MaximumBalanceCommandCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "SimpleEcomomySell",
+      "type": "command",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "simple_ecomomy_sell",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/command/SimpleEcomomySellCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "SimpleEcomomyBalance",
+      "type": "command",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "simple_ecomomy_balance",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/command/SimpleEcomomyBalanceCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "SimpleEconomyShop",
+      "type": "command",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "simple_economy_shop",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/command/SimpleEconomyShopCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "SimpleEconomyBalanceSet",
+      "type": "command",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "simple_economy_balance_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/command/SimpleEconomyBalanceSetCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "SimpleEconomyPay",
+      "type": "command",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "simple_economy_pay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/command/SimpleEconomyPayCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "SimpleEconomyMaximumBalanceSet",
+      "type": "command",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "simple_economy_maximum_balance_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/command/SimpleEconomyMaximumBalanceSetCommand.java"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "Money",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "MaximumBalance",
+      "type": "number",
+      "scope": "map",
+      "value": "1.0E9"
+    }
+  ],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "gui.simple_economy.netherite_scrap_gui.label_buy_price_7": "Buy price: 320$",
+      "gui.simple_economy.gold_gui.label_sell_price_050": "Sell price: 3.4$",
+      "gui.simple_economy.netherite_ingot_gui.label_buy_price_7": "Buy price: 1280$",
+      "gui.easy_economy.coal_buy_gui.button_buy_x64": "Buy x64",
+      "gui.simple_economy.coal_gui.button_back": "Back",
+      "gui.easy_economy.netherite_ingot_gui.button_back": "Back",
+      "gui.easy_economy.gold_gui.button_buy": "Buy",
+      "gui.simple_economy.netherite_ingot_buy_gui.button_buy_x1": "Buy x1",
+      "gui.simple_economy.gold_buy_gui.button_buy_x64": "Buy x64",
+      "gui.easy_economy.emerald_buy_gui.button_back": "Back",
+      "gui.simple_economy.diamond_buy_gui.button_buy_x1": "Buy x1",
+      "gui.simple_economy.diamond_buy_gui.button_back": "Back",
+      "gui.easy_economy.shop_gui.label_shop": "SHOP",
+      "gui.easy_economy.shop_gui.button_balance": "Balance",
+      "gui.simple_economy.emerald_gui.button_back": "Back",
+      "gui.easy_economy.diamond_buy_gui.button_back": "Back",
+      "gui.simple_economy.emerald_buy_gui.button_back": "Back",
+      "gui.simple_economy.coal_buy_gui.button_back": "Back",
+      "gui.simple_economy.iron_buy_gui.button_buy_x1": "Buy x1",
+      "gui.simple_economy.emerald_gui.label_sell_price_050": "Sell price: 13$",
+      "gui.easy_economy.diamond_gui.label_buy_price_7": "Buy price: 200$",
+      "gui.simple_economy.diamond_gui.label_buy_price_7": "Buy price: 200$",
+      "gui.simple_economy.shop_gui.button_ores": "Ores",
+      "gui.easy_economy.netherite_gui.button_back": "Back",
+      "gui.easy_economy.coal_gui.label_buy_price_7": "Buy price: 7$",
+      "gui.easy_economy.iron_buy_gui.button_back": "Back",
+      "gui.easy_economy.emerald_gui.button_buy": "Buy",
+      "gui.easy_economy.gold_buy_gui.button_buy_x64": "Buy x64",
+      "gui.easy_economy.shop_gui.button_food": "Food",
+      "gui.easy_economy.ores.button_back": "Back",
+      "gui.easy_economy.iron_gui.button_buy": "Buy",
+      "gui.easy_economy.netherite_ingot_gui.label_buy_price_7": "Buy price: 1280$",
+      "gui.simple_economy.netherite_gui.button_back": "Back",
+      "gui.simple_economy.ores.button_gold": "Gold",
+      "gui.simple_economy.coal_gui.button_buy": "Buy",
+      "gui.simple_economy.iron_buy_gui.button_buy_x64": "Buy x64",
+      "gui.easy_economy.emerald_gui.label_sell_price_050": "Sell price: 13$",
+      "gui.easy_economy.gold_gui.label_sell_price_050": "Sell price: 3.4$",
+      "gui.easy_economy.shop_gui.button_blocks": "Blocks",
+      "gui.easy_economy.netherite_ingot_buy_gui.button_buy_x64": "Buy x64",
+      "gui.simple_economy.shop_gui.button_food": "Food",
+      "gui.simple_economy.diamond_gui.label_sell_price_050": "Sell price: 39$",
+      "gui.simple_economy.netherite_scrap_buy_gui.button_back": "Back",
+      "gui.easy_economy.emerald_gui.label_buy_price_7": "Buy price: 61$",
+      "gui.easy_economy.diamond_buy_gui.button_buy_x1": "Buy x1",
+      "gui.easy_economy.netherite_gui.label_sell_price_050": "Sell price: 39$",
+      "gui.simple_economy.netherite_gui.button_netherite_scrap": "Netherite Scrap",
+      "gui.simple_economy.ores.button_diamond": "Diamond",
+      "gui.easy_economy.netherite_scrap_gui.label_buy_price_7": "Buy price: 320$",
+      "gui.simple_economy.emerald_buy_gui.button_buy_x64": "Buy x64",
+      "gui.easy_economy.netherite_ingot_buy_gui.button_buy_x1": "Buy x1",
+      "gui.simple_economy.netherite_scrap_gui.button_back": "Back",
+      "gui.simple_economy.shop_gui.button_miscellaneous": "Miscellaneous",
+      "gui.easy_economy.emerald_buy_gui.button_buy_x64": "Buy x64",
+      "gui.easy_economy.netherite_scrap_buy_gui.button_buy_x1": "Buy x1",
+      "gui.simple_economy.diamond_gui.button_back": "Back",
+      "gui.simple_economy.gold_buy_gui.button_buy_x1": "Buy x1",
+      "gui.easy_economy.emerald_buy_gui.button_buy_x1": "Buy x1",
+      "gui.simple_economy.coal_buy_gui.button_buy_x64": "Buy x64",
+      "gui.easy_economy.gold_gui.button_back": "Back",
+      "gui.easy_economy.diamond_gui.label_sell_price_050": "Sell price: 39$",
+      "gui.simple_economy.diamond_gui.button_buy": "Buy",
+      "gui.easy_economy.iron_buy_gui.button_buy_x1": "Buy x1",
+      "gui.easy_economy.iron_gui.label_sell_price_050": "Sell price: 2.1$",
+      "gui.easy_economy.shop_gui.button_pvp": "PvP",
+      "gui.simple_economy.ores.button_coal": "Coal",
+      "gui.simple_economy.gold_buy_gui.button_back": "Back",
+      "gui.simple_economy.coal_gui.label_buy_price_7": "Buy price: 7$",
+      "gui.simple_economy.netherite_scrap_buy_gui.button_buy_x1": "Buy x1",
+      "gui.simple_economy.netherite_gui.button_netherite_ingot": "Netherite Ingot",
+      "gui.simple_economy.gold_gui.label_buy_price_7": "Buy price: 20$",
+      "gui.easy_economy.netherite_scrap_buy_gui.button_back": "Back",
+      "gui.easy_economy.netherite_gui.button_netherite_ingot": "Netherite Ingot",
+      "gui.easy_economy.ores.button_netherite": "Netherite",
+      "gui.easy_economy.netherite_ingot_buy_gui.button_back": "Back",
+      "gui.easy_economy.iron_gui.label_buy_price_7": "Buy price: 13$",
+      "gui.simple_economy.ores.button_back": "Back",
+      "gui.simple_economy.shop_gui.button_blocks": "Blocks",
+      "gui.simple_economy.diamond_buy_gui.button_buy_x64": "Buy x64",
+      "gui.easy_economy.shop_gui.button_ores": "Ores",
+      "gui.simple_economy.emerald_gui.label_buy_price_7": "Buy price: 61$",
+      "gui.simple_economy.gold_gui.button_buy": "Buy",
+      "gui.simple_economy.emerald_buy_gui.button_buy_x1": "Buy x1",
+      "gui.easy_economy.netherite_gui.button_netherite_scrap": "Netherite Scrap",
+      "gui.simple_economy.netherite_ingot_buy_gui.button_back": "Back",
+      "gui.easy_economy.netherite_scrap_gui.label_sell_price_050": "Sell price: 50$",
+      "gui.easy_economy.iron_gui.button_back": "Back",
+      "gui.simple_economy.coal_buy_gui.button_buy_x1": "Buy x1",
+      "gui.easy_economy.iron_buy_gui.button_buy_x64": "Buy x64",
+      "gui.simple_economy.netherite_ingot_gui.button_back": "Back",
+      "gui.simple_economy.ores.button_iron": "Iron",
+      "gui.easy_economy.ores.button_gold": "Gold",
+      "gui.easy_economy.coal_gui.button_back": "Back",
+      "gui.simple_economy.coal_gui.label_sell_price_050": "Sell price: 0.50$",
+      "gui.simple_economy.netherite_scrap_buy_gui.button_buy_x64": "Buy x64",
+      "gui.easy_economy.gold_gui.label_buy_price_7": "Buy price: 20$",
+      "gui.simple_economy.ores.button_netherite": "Netherite",
+      "gui.easy_economy.netherite_gui.button_buy": "Buy",
+      "gui.easy_economy.diamond_gui.button_back": "Back",
+      "gui.easy_economy.gold_buy_gui.button_back": "Back",
+      "gui.simple_economy.netherite_ingot_buy_gui.button_buy_x64": "Buy x64",
+      "gui.easy_economy.coal_gui.button_sell": "Sell",
+      "gui.simple_economy.netherite_ingot_gui.label_sell_price_050": "Sell price: 200$",
+      "gui.easy_economy.ores.button_emerald": "Emerald",
+      "gui.easy_economy.gold_buy_gui.button_buy_x1": "Buy x1",
+      "gui.easy_economy.coal_buy_gui.button_back": "Back",
+      "gui.simple_economy.shop_gui.button_balance": "Balance",
+      "gui.easy_economy.coal_gui.button_buy": "Buy",
+      "gui.simple_economy.gold_gui.button_back": "Back",
+      "gui.simple_economy.netherite_scrap_gui.button_buy": "Buy",
+      "gui.easy_economy.netherite_scrap_gui.button_back": "Back",
+      "gui.easy_economy.netherite_gui.label_buy_price_7": "Buy price: 200$",
+      "gui.easy_economy.diamond_gui.button_buy": "Buy",
+      "gui.easy_economy.diamond_buy_gui.button_buy_x64": "Buy x64",
+      "gui.simple_economy.iron_gui.button_buy": "Buy",
+      "gui.simple_economy.netherite_scrap_gui.label_sell_price_050": "Sell price: 50$",
+      "gui.simple_economy.ores.button_emerald": "Emerald",
+      "gui.simple_economy.emerald_gui.button_buy": "Buy",
+      "gui.easy_economy.ores.button_iron": "Iron",
+      "gui.simple_economy.netherite_ingot_gui.button_buy": "Buy",
+      "gui.easy_economy.shop_gui.button_miscellaneous": "Miscellaneous",
+      "gui.easy_economy.coal_buy_gui.button_buy_x1": "Buy x1",
+      "gui.simple_economy.iron_gui.label_buy_price_7": "Buy price: 13$",
+      "gui.easy_economy.coal_gui.label_sell_price_050": "Sell price: 0.50$",
+      "gui.easy_economy.emerald_gui.button_back": "Back",
+      "gui.easy_economy.netherite_scrap_buy_gui.button_buy_x64": "Buy x64",
+      "gui.simple_economy.shop_gui.button_pvp": "PvP",
+      "gui.simple_economy.iron_gui.button_back": "Back",
+      "gui.easy_economy.ores.button_coal": "Coal",
+      "gui.simple_economy.iron_gui.label_sell_price_050": "Sell price: 2.1$",
+      "gui.easy_economy.netherite_scrap_gui.button_buy": "Buy",
+      "gui.easy_economy.netherite_ingot_gui.label_sell_price_050": "Sell price: 200$",
+      "gui.easy_economy.netherite_ingot_gui.button_buy": "Buy",
+      "gui.simple_economy.iron_buy_gui.button_back": "Back",
+      "gui.easy_economy.ores.button_diamond": "Diamond",
+      "gui.simple_economy.shop_gui.label_shop": "SHOP"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "simple_economy",
+    "modName": "Simple Economy",
+    "version": "1.1.0",
+    "description": "Introduces a simple economy addon in your game. To sell items, do /sell. To buy items, do /shop. To see your balance, do /balance. Admins can do /balance:set (player) (amount) to set a player(s) balance to a  certain amount.",
+    "author": "The_WereF0X",
+    "websiteURL": "https://discord.gg/8gWbTqKuhF",
+    "license": "All Rights Reserved",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": true,
+    "updateURL": "https://discord.gg/8gWbTqKuhF",
+    "modPicture": "ec",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "The_WereF0X",
+    "modElementsPackage": "net.mcreator.simpleeconomy",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300336712
+}
