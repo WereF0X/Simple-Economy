@@ -12,6 +12,8 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.simpleeconomy.world.inventory.FoodGUIPage2Menu;
+import net.mcreator.simpleeconomy.procedures.FoodSlot3BuyProcedure;
+import net.mcreator.simpleeconomy.procedures.FoodSlot2BuyProcedure;
 import net.mcreator.simpleeconomy.procedures.FoodSlot0SetProcedure;
 import net.mcreator.simpleeconomy.SimpleEconomyMod;
 
@@ -62,6 +64,14 @@ public class FoodGUIPage2ButtonMessage {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 0) {
+
+			FoodSlot2BuyProcedure.execute(entity, guistate);
+		}
+		if (buttonID == 1) {
+
+			FoodSlot3BuyProcedure.execute(entity, guistate);
+		}
 		if (buttonID == 2) {
 
 			FoodSlot0SetProcedure.execute(world, x, y, z, entity);

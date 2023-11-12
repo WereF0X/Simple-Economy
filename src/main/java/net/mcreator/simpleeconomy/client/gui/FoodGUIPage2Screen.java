@@ -86,10 +86,18 @@ public class FoodGUIPage2Screen extends AbstractContainerScreen<FoodGUIPage2Menu
 	public void init() {
 		super.init();
 		button_buy = Button.builder(Component.translatable("gui.simple_economy.food_gui_page_2.button_buy"), e -> {
+			if (true) {
+				SimpleEconomyMod.PACKET_HANDLER.sendToServer(new FoodGUIPage2ButtonMessage(0, x, y, z));
+				FoodGUIPage2ButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		}).bounds(this.leftPos + 32, this.topPos + 7, 40, 20).build();
 		guistate.put("button:button_buy", button_buy);
 		this.addRenderableWidget(button_buy);
 		button_buy1 = Button.builder(Component.translatable("gui.simple_economy.food_gui_page_2.button_buy1"), e -> {
+			if (true) {
+				SimpleEconomyMod.PACKET_HANDLER.sendToServer(new FoodGUIPage2ButtonMessage(1, x, y, z));
+				FoodGUIPage2ButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
 		}).bounds(this.leftPos + 32, this.topPos + 32, 40, 20).build();
 		guistate.put("button:button_buy1", button_buy1);
 		this.addRenderableWidget(button_buy1);

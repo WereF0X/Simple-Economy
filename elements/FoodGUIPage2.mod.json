@@ -27,6 +27,9 @@
         "data": {
           "name": "button_buy",
           "text": "Buy",
+          "onClick": {
+            "name": "FoodSlot2Buy"
+          },
           "width": 40,
           "height": 20,
           "x": 158,
@@ -59,6 +62,9 @@
         "data": {
           "name": "button_buy1",
           "text": "Buy",
+          "onClick": {
+            "name": "FoodSlot3Buy"
+          },
           "width": 40,
           "height": 20,
           "x": 158,

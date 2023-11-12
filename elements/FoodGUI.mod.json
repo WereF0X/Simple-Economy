@@ -86,7 +86,7 @@
           "name": "button_back",
           "text": "Back",
           "onClick": {
-            "name": "FoodSlot0Set"
+            "name": "ShopProcedure"
           },
           "width": 46,
           "height": 20,
