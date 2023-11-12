@@ -31,7 +31,7 @@ public class MaximumBalanceCommandCommand {
 				entity = FakePlayerFactory.getMinecraft(world);
 			Direction direction = entity.getDirection();
 
-			MaximumBalanceSetProcedure.execute(arguments, entity);
+			MaximumBalanceSetProcedure.execute(world, arguments, entity);
 			return 0;
 		})));
 	}

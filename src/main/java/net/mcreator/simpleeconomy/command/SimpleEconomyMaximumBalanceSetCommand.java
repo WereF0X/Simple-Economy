@@ -31,7 +31,7 @@ public class SimpleEconomyMaximumBalanceSetCommand {
 				entity = FakePlayerFactory.getMinecraft(world);
 			Direction direction = entity.getDirection();
 
-			MaximumBalanceSetProcedure.execute(arguments, entity);
+			MaximumBalanceSetProcedure.execute(world, arguments, entity);
 			return 0;
 		})));
 	}
