@@ -28,16 +28,16 @@ public class FoodSlot0BuyProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player)
-					_player.closeContainer();
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(("You successfully bought 64xSTEAK. " + "Your current balance is "
-							+ (entity.getCapability(SimpleEconomyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SimpleEconomyModVariables.PlayerVariables())).Money + "$")), false);
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY);
 					_setstack.setCount(64);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
+				if (entity instanceof Player _player)
+					_player.closeContainer();
+				if (entity instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal(("You successfully bought 64xSTEAK. " + "Your current balance is "
+							+ (entity.getCapability(SimpleEconomyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SimpleEconomyModVariables.PlayerVariables())).Money + "$")), false);
 			} else {
 				if (entity instanceof Player _player)
 					_player.closeContainer();
@@ -56,17 +56,17 @@ public class FoodSlot0BuyProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
 				if (entity instanceof Player _player)
 					_player.closeContainer();
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal(
 							("You successfully bought 1xSTEAK. " + "Your current balance is " + (entity.getCapability(SimpleEconomyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SimpleEconomyModVariables.PlayerVariables())).Money + "$")),
 							false);
-				if (entity instanceof Player _player) {
-					ItemStack _setstack = (entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(0)).getItem() : ItemStack.EMPTY);
-					_setstack.setCount(1);
-					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-				}
 			} else {
 				if (entity instanceof Player _player)
 					_player.closeContainer();
