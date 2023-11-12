@@ -24,6 +24,7 @@ import net.mcreator.simpleeconomy.client.gui.IronBuyGUIScreen;
 import net.mcreator.simpleeconomy.client.gui.GoldGUIScreen;
 import net.mcreator.simpleeconomy.client.gui.GoldBuyGUIScreen;
 import net.mcreator.simpleeconomy.client.gui.FoodGUIScreen;
+import net.mcreator.simpleeconomy.client.gui.FoodGUIPage2Screen;
 import net.mcreator.simpleeconomy.client.gui.EmeraldGUIScreen;
 import net.mcreator.simpleeconomy.client.gui.EmeraldBuyGUIScreen;
 import net.mcreator.simpleeconomy.client.gui.DiamondGUIScreen;
@@ -55,6 +56,7 @@ public class SimpleEconomyModScreens {
 			MenuScreens.register(SimpleEconomyModMenus.NETHERITE_INGOT_BUY_GUI.get(), NetheriteIngotBuyGUIScreen::new);
 			MenuScreens.register(SimpleEconomyModMenus.SEARCH_GUI.get(), SearchGUIScreen::new);
 			MenuScreens.register(SimpleEconomyModMenus.FOOD_GUI.get(), FoodGUIScreen::new);
+			MenuScreens.register(SimpleEconomyModMenus.FOOD_GUI_PAGE_2.get(), FoodGUIPage2Screen::new);
 		});
 	}
 }

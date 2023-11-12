@@ -41,9 +41,7 @@ public class FoodSlot0BuyProcedure {
 					_player.closeContainer();
 				DisableProcedure.execute();
 				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(
-							("You don't have enough money! " + "Your current balance is " + (entity.getCapability(SimpleEconomyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SimpleEconomyModVariables.PlayerVariables())).Money + "$")),
-							false);
+					_player.displayClientMessage(Component.literal(("You don't have enough money! " + "The item price is " + 12 * 64 + "$")), false);
 			}
 		} else {
 			if ((entity.getCapability(SimpleEconomyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SimpleEconomyModVariables.PlayerVariables())).Money >= 12) {
@@ -70,9 +68,7 @@ public class FoodSlot0BuyProcedure {
 					_player.closeContainer();
 				DisableProcedure.execute();
 				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(
-							("You don't have enough money! " + "Your current balance is " + (entity.getCapability(SimpleEconomyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new SimpleEconomyModVariables.PlayerVariables())).Money + "$")),
-							false);
+					_player.displayClientMessage(Component.literal(("You don't have enough money! " + "The item price is " + 12 + "$")), false);
 			}
 		}
 	}

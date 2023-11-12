@@ -27,9 +27,6 @@
         "data": {
           "name": "button_buy",
           "text": "Buy",
-          "onClick": {
-            "name": "FoodSlot0Buy"
-          },
           "width": 40,
           "height": 20,
           "x": 158,
@@ -62,9 +59,6 @@
         "data": {
           "name": "button_buy1",
           "text": "Buy",
-          "onClick": {
-            "name": "FoodSlot1Buy"
-          },
           "width": 40,
           "height": 20,
           "x": 158,
@@ -99,9 +93,6 @@
         "data": {
           "name": "button_next_page",
           "text": "Next Page",
-          "onClick": {
-            "name": "FoodGUIPage2Set"
-          },
           "width": 72,
           "height": 20,
           "x": 208,

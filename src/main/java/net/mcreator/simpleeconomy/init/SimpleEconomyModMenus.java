@@ -23,6 +23,7 @@ import net.mcreator.simpleeconomy.world.inventory.IronGUIMenu;
 import net.mcreator.simpleeconomy.world.inventory.IronBuyGUIMenu;
 import net.mcreator.simpleeconomy.world.inventory.GoldGUIMenu;
 import net.mcreator.simpleeconomy.world.inventory.GoldBuyGUIMenu;
+import net.mcreator.simpleeconomy.world.inventory.FoodGUIPage2Menu;
 import net.mcreator.simpleeconomy.world.inventory.FoodGUIMenu;
 import net.mcreator.simpleeconomy.world.inventory.EmeraldGUIMenu;
 import net.mcreator.simpleeconomy.world.inventory.EmeraldBuyGUIMenu;
@@ -53,4 +54,5 @@ public class SimpleEconomyModMenus {
 	public static final RegistryObject<MenuType<NetheriteIngotBuyGUIMenu>> NETHERITE_INGOT_BUY_GUI = REGISTRY.register("netherite_ingot_buy_gui", () -> IForgeMenuType.create(NetheriteIngotBuyGUIMenu::new));
 	public static final RegistryObject<MenuType<SearchGUIMenu>> SEARCH_GUI = REGISTRY.register("search_gui", () -> IForgeMenuType.create(SearchGUIMenu::new));
 	public static final RegistryObject<MenuType<FoodGUIMenu>> FOOD_GUI = REGISTRY.register("food_gui", () -> IForgeMenuType.create(FoodGUIMenu::new));
+	public static final RegistryObject<MenuType<FoodGUIPage2Menu>> FOOD_GUI_PAGE_2 = REGISTRY.register("food_gui_page_2", () -> IForgeMenuType.create(FoodGUIPage2Menu::new));
 }

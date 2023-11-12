@@ -10,16 +10,16 @@ import net.minecraft.client.gui.components.Checkbox;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
-import net.mcreator.simpleeconomy.world.inventory.FoodGUIMenu;
-import net.mcreator.simpleeconomy.network.FoodGUIButtonMessage;
+import net.mcreator.simpleeconomy.world.inventory.FoodGUIPage2Menu;
+import net.mcreator.simpleeconomy.network.FoodGUIPage2ButtonMessage;
 import net.mcreator.simpleeconomy.SimpleEconomyMod;
 
 import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class FoodGUIScreen extends AbstractContainerScreen<FoodGUIMenu> {
-	private final static HashMap<String, Object> guistate = FoodGUIMenu.guistate;
+public class FoodGUIPage2Screen extends AbstractContainerScreen<FoodGUIPage2Menu> {
+	private final static HashMap<String, Object> guistate = FoodGUIPage2Menu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -30,7 +30,7 @@ public class FoodGUIScreen extends AbstractContainerScreen<FoodGUIMenu> {
 	Button button_back;
 	Button button_next_page;
 
-	public FoodGUIScreen(FoodGUIMenu container, Inventory inventory, Component text) {
+	public FoodGUIPage2Screen(FoodGUIPage2Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
@@ -41,7 +41,7 @@ public class FoodGUIScreen extends AbstractContainerScreen<FoodGUIMenu> {
 		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("simple_economy:textures/screens/food_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("simple_economy:textures/screens/food_gui_page_2.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
@@ -85,42 +85,30 @@ public class FoodGUIScreen extends AbstractContainerScreen<FoodGUIMenu> {
 	@Override
 	public void init() {
 		super.init();
-		button_buy = Button.builder(Component.translatable("gui.simple_economy.food_gui.button_buy"), e -> {
-			if (true) {
-				SimpleEconomyMod.PACKET_HANDLER.sendToServer(new FoodGUIButtonMessage(0, x, y, z));
-				FoodGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
+		button_buy = Button.builder(Component.translatable("gui.simple_economy.food_gui_page_2.button_buy"), e -> {
 		}).bounds(this.leftPos + 32, this.topPos + 7, 40, 20).build();
 		guistate.put("button:button_buy", button_buy);
 		this.addRenderableWidget(button_buy);
-		button_buy1 = Button.builder(Component.translatable("gui.simple_economy.food_gui.button_buy1"), e -> {
-			if (true) {
-				SimpleEconomyMod.PACKET_HANDLER.sendToServer(new FoodGUIButtonMessage(1, x, y, z));
-				FoodGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
-			}
+		button_buy1 = Button.builder(Component.translatable("gui.simple_economy.food_gui_page_2.button_buy1"), e -> {
 		}).bounds(this.leftPos + 32, this.topPos + 32, 40, 20).build();
 		guistate.put("button:button_buy1", button_buy1);
 		this.addRenderableWidget(button_buy1);
-		button_back = Button.builder(Component.translatable("gui.simple_economy.food_gui.button_back"), e -> {
+		button_back = Button.builder(Component.translatable("gui.simple_economy.food_gui_page_2.button_back"), e -> {
 			if (true) {
-				SimpleEconomyMod.PACKET_HANDLER.sendToServer(new FoodGUIButtonMessage(2, x, y, z));
-				FoodGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
+				SimpleEconomyMod.PACKET_HANDLER.sendToServer(new FoodGUIPage2ButtonMessage(2, x, y, z));
+				FoodGUIPage2ButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}).bounds(this.leftPos + 25, this.topPos + 60, 46, 20).build();
 		guistate.put("button:button_back", button_back);
 		this.addRenderableWidget(button_back);
-		button_next_page = Button.builder(Component.translatable("gui.simple_economy.food_gui.button_next_page"), e -> {
-			if (true) {
-				SimpleEconomyMod.PACKET_HANDLER.sendToServer(new FoodGUIButtonMessage(3, x, y, z));
-				FoodGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
-			}
+		button_next_page = Button.builder(Component.translatable("gui.simple_economy.food_gui_page_2.button_next_page"), e -> {
 		}).bounds(this.leftPos + 82, this.topPos + 60, 72, 20).build();
 		guistate.put("button:button_next_page", button_next_page);
 		this.addRenderableWidget(button_next_page);
-		amount = new Checkbox(this.leftPos + 81, this.topPos + 7, 20, 20, Component.translatable("gui.simple_economy.food_gui.amount"), false);
+		amount = new Checkbox(this.leftPos + 81, this.topPos + 7, 20, 20, Component.translatable("gui.simple_economy.food_gui_page_2.amount"), false);
 		guistate.put("checkbox:amount", amount);
 		this.addRenderableWidget(amount);
-		amount1 = new Checkbox(this.leftPos + 81, this.topPos + 32, 20, 20, Component.translatable("gui.simple_economy.food_gui.amount1"), false);
+		amount1 = new Checkbox(this.leftPos + 81, this.topPos + 32, 20, 20, Component.translatable("gui.simple_economy.food_gui_page_2.amount1"), false);
 		guistate.put("checkbox:amount1", amount1);
 		this.addRenderableWidget(amount1);
 	}

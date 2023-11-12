@@ -1604,6 +1604,102 @@
           }
         ]
       }
+    },
+    {
+      "name": "FoodGUIPage2",
+      "type": "gui",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "food_gui_page_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/FoodGUIPage2Menu.java",
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/FoodGUIPage2Screen.java",
+          "src/main/java/net/mcreator/simpleeconomy/network/FoodGUIPage2ButtonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "FoodGUIPage2Set",
+      "type": "procedure",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "food_gui_page_2_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/FoodGUIPage2SetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FoodSlot2Buy",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "food_slot_2_buy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/FoodSlot2BuyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FoodSlot3Buy",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "food_slot_3_buy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/FoodSlot3BuyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1625,19 +1721,21 @@
     "en_us": {
       "gui.simple_economy.netherite_scrap_gui.label_buy_price_7": "Buy price: 320$",
       "gui.simple_economy.gold_gui.label_sell_price_050": "Sell price: 3.4$",
-      "gui.simple_economy.netherite_ingot_gui.label_buy_price_7": "Buy price: 1280$",
       "gui.simple_economy.shop_gui.button_search": "Search",
+      "gui.simple_economy.netherite_ingot_gui.label_buy_price_7": "Buy price: 1280$",
       "gui.simple_economy.coal_gui.button_back": "Back",
       "gui.easy_economy.coal_buy_gui.button_buy_x64": "Buy x64",
       "gui.simple_economy.food_gui.button_next_page": "Next Page",
-      "gui.easy_economy.gold_gui.button_buy": "Buy",
       "gui.easy_economy.netherite_ingot_gui.button_back": "Back",
+      "gui.easy_economy.gold_gui.button_buy": "Buy",
       "gui.simple_economy.netherite_ingot_buy_gui.button_buy_x1": "Buy x1",
       "gui.simple_economy.gold_buy_gui.button_buy_x64": "Buy x64",
       "gui.simple_economy.diamond_buy_gui.button_buy_x1": "Buy x1",
       "gui.easy_economy.emerald_buy_gui.button_back": "Back",
       "gui.simple_economy.diamond_buy_gui.button_back": "Back",
+      "gui.simple_economy.food_gui_page_2.button_next_page": "Next Page",
       "gui.easy_economy.shop_gui.label_shop": "SHOP",
+      "gui.simple_economy.food_gui_page_2.amount": "Buy 64?",
       "gui.easy_economy.shop_gui.button_balance": "Balance",
       "gui.simple_economy.emerald_gui.button_back": "Back",
       "gui.easy_economy.diamond_buy_gui.button_back": "Back",
@@ -1652,6 +1750,7 @@
       "gui.simple_economy.diamond_gui.label_buy_price_7": "Buy price: 200$",
       "gui.simple_economy.shop_gui.button_ores": "Ores",
       "gui.easy_economy.netherite_gui.button_back": "Back",
+      "gui.simple_economy.food_gui_page_2.amount1": "Buy 64?",
       "gui.easy_economy.coal_gui.label_buy_price_7": "Buy price: 7$",
       "gui.easy_economy.iron_buy_gui.button_back": "Back",
       "gui.easy_economy.emerald_gui.button_buy": "Buy",
@@ -1690,6 +1789,7 @@
       "gui.easy_economy.emerald_buy_gui.button_buy_x1": "Buy x1",
       "gui.simple_economy.coal_buy_gui.button_buy_x64": "Buy x64",
       "gui.easy_economy.gold_gui.button_back": "Back",
+      "gui.simple_economy.food_gui_page_2.button_buy1": "Buy",
       "gui.easy_economy.diamond_gui.label_sell_price_050": "Sell price: 39$",
       "gui.simple_economy.diamond_gui.button_buy": "Buy",
       "gui.easy_economy.iron_buy_gui.button_buy_x1": "Buy x1",
@@ -1762,7 +1862,9 @@
       "gui.easy_economy.netherite_scrap_buy_gui.button_buy_x64": "Buy x64",
       "gui.simple_economy.shop_gui.button_pvp": "PvP",
       "gui.simple_economy.iron_gui.button_back": "Back",
+      "gui.simple_economy.food_gui_page_2.button_back": "Back",
       "gui.easy_economy.ores.button_coal": "Coal",
+      "gui.simple_economy.food_gui_page_2.button_buy": "Buy",
       "gui.simple_economy.iron_gui.label_sell_price_050": "Sell price: 2.1$",
       "gui.easy_economy.netherite_scrap_gui.button_buy": "Buy",
       "gui.easy_economy.netherite_ingot_gui.label_sell_price_050": "Sell price: 200$",
@@ -1780,7 +1882,7 @@
   "workspaceSettings": {
     "modid": "simple_economy",
     "modName": "Simple Economy",
-    "version": "1.1.0",
+    "version": "1.1.2",
     "description": "Introduces a simple economy addon in your game. To sell items, do /sell. To buy items, do /shop. To see your balance, do /balance. Admins can do /balance:set (player) (amount) to set a player(s) balance to a  certain amount.",
     "author": "The_WereF0X",
     "websiteURL": "https://discord.gg/8gWbTqKuhF",
