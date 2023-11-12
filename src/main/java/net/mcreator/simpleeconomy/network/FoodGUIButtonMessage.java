@@ -12,6 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.simpleeconomy.world.inventory.FoodGUIMenu;
+import net.mcreator.simpleeconomy.procedures.ShopProcedureProcedure;
 import net.mcreator.simpleeconomy.procedures.FoodSlot1BuyProcedure;
 import net.mcreator.simpleeconomy.procedures.FoodSlot0BuyProcedure;
 import net.mcreator.simpleeconomy.SimpleEconomyMod;
@@ -70,6 +71,10 @@ public class FoodGUIButtonMessage {
 		if (buttonID == 1) {
 
 			FoodSlot1BuyProcedure.execute(entity, guistate);
+		}
+		if (buttonID == 2) {
+
+			ShopProcedureProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

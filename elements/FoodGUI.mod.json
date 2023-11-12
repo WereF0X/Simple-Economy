@@ -79,6 +79,31 @@
           "x": 207,
           "y": 69
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_back",
+          "text": "Back",
+          "onClick": {
+            "name": "ShopProcedure"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 151,
+          "y": 97
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_next_page",
+          "text": "Next Page",
+          "width": 72,
+          "height": 20,
+          "x": 208,
+          "y": 97
+        }
       }
     ],
     "gridSettings": {

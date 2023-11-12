@@ -135,7 +135,7 @@ public class SimpleEconomyModVariables {
 
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "simple_economy_mapvars";
-		public double MaximumBalance = 1.0E9;
+		public double MaximumBalance = 10000.0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
