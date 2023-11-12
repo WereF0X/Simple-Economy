@@ -44,6 +44,41 @@
           "x": 207,
           "y": 44
         }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 133,
+          "y": 70
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_buy1",
+          "text": "Buy",
+          "onClick": {
+            "name": "FoodSlot1Buy"
+          },
+          "width": 40,
+          "height": 20,
+          "x": 158,
+          "y": 69
+        }
+      },
+      {
+        "type": "checkbox",
+        "data": {
+          "name": "amount1",
+          "text": "Buy 64?",
+          "x": 207,
+          "y": 69
+        }
       }
     ],
     "gridSettings": {

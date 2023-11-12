@@ -1581,6 +1581,29 @@
         ],
         "dependencies": []
       }
+    },
+    {
+      "name": "FoodSlot1Buy",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "food_slot_1_buy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/FoodSlot1BuyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1653,6 +1676,7 @@
       "gui.simple_economy.netherite_gui.button_netherite_scrap": "Netherite Scrap",
       "gui.simple_economy.ores.button_diamond": "Diamond",
       "gui.easy_economy.netherite_scrap_gui.label_buy_price_7": "Buy price: 320$",
+      "gui.simple_economy.food_gui.button_buy1": "Buy",
       "gui.simple_economy.emerald_buy_gui.button_buy_x64": "Buy x64",
       "gui.easy_economy.netherite_ingot_buy_gui.button_buy_x1": "Buy x1",
       "gui.simple_economy.netherite_scrap_gui.button_back": "Back",
@@ -1719,6 +1743,7 @@
       "gui.simple_economy.netherite_scrap_gui.button_buy": "Buy",
       "gui.easy_economy.netherite_scrap_gui.button_back": "Back",
       "gui.easy_economy.netherite_gui.label_buy_price_7": "Buy price: 200$",
+      "gui.simple_economy.food_gui.amount1": "Buy 64?",
       "gui.easy_economy.diamond_gui.button_buy": "Buy",
       "gui.easy_economy.diamond_buy_gui.button_buy_x64": "Buy x64",
       "gui.simple_economy.iron_gui.button_buy": "Buy",

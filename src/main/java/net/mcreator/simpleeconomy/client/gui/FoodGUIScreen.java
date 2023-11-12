@@ -24,7 +24,9 @@ public class FoodGUIScreen extends AbstractContainerScreen<FoodGUIMenu> {
 	private final int x, y, z;
 	private final Player entity;
 	Checkbox amount;
+	Checkbox amount1;
 	Button button_buy;
+	Button button_buy1;
 
 	public FoodGUIScreen(FoodGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -89,8 +91,19 @@ public class FoodGUIScreen extends AbstractContainerScreen<FoodGUIMenu> {
 		}).bounds(this.leftPos + 32, this.topPos + 7, 40, 20).build();
 		guistate.put("button:button_buy", button_buy);
 		this.addRenderableWidget(button_buy);
+		button_buy1 = Button.builder(Component.translatable("gui.simple_economy.food_gui.button_buy1"), e -> {
+			if (true) {
+				SimpleEconomyMod.PACKET_HANDLER.sendToServer(new FoodGUIButtonMessage(1, x, y, z));
+				FoodGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
+		}).bounds(this.leftPos + 32, this.topPos + 32, 40, 20).build();
+		guistate.put("button:button_buy1", button_buy1);
+		this.addRenderableWidget(button_buy1);
 		amount = new Checkbox(this.leftPos + 81, this.topPos + 7, 20, 20, Component.translatable("gui.simple_economy.food_gui.amount"), false);
 		guistate.put("checkbox:amount", amount);
 		this.addRenderableWidget(amount);
+		amount1 = new Checkbox(this.leftPos + 81, this.topPos + 32, 20, 20, Component.translatable("gui.simple_economy.food_gui.amount1"), false);
+		guistate.put("checkbox:amount1", amount1);
+		this.addRenderableWidget(amount1);
 	}
 }
