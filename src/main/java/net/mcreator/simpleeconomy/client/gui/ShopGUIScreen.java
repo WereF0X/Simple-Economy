@@ -28,6 +28,7 @@ public class ShopGUIScreen extends AbstractContainerScreen<ShopGUIMenu> {
 	Button button_miscellaneous;
 	Button button_food;
 	Button button_balance;
+	Button button_search;
 
 	public ShopGUIScreen(ShopGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -106,6 +107,10 @@ public class ShopGUIScreen extends AbstractContainerScreen<ShopGUIMenu> {
 		guistate.put("button:button_miscellaneous", button_miscellaneous);
 		this.addRenderableWidget(button_miscellaneous);
 		button_food = Button.builder(Component.translatable("gui.simple_economy.shop_gui.button_food"), e -> {
+			if (true) {
+				SimpleEconomyMod.PACKET_HANDLER.sendToServer(new ShopGUIButtonMessage(4, x, y, z));
+				ShopGUIButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
 		}).bounds(this.leftPos + 164, this.topPos + 98, 46, 20).build();
 		guistate.put("button:button_food", button_food);
 		this.addRenderableWidget(button_food);
@@ -117,5 +122,13 @@ public class ShopGUIScreen extends AbstractContainerScreen<ShopGUIMenu> {
 		}).bounds(this.leftPos + 1, this.topPos + 145, 61, 20).build();
 		guistate.put("button:button_balance", button_balance);
 		this.addRenderableWidget(button_balance);
+		button_search = Button.builder(Component.translatable("gui.simple_economy.shop_gui.button_search"), e -> {
+			if (true) {
+				SimpleEconomyMod.PACKET_HANDLER.sendToServer(new ShopGUIButtonMessage(6, x, y, z));
+				ShopGUIButtonMessage.handleButtonAction(entity, 6, x, y, z);
+			}
+		}).bounds(this.leftPos + 0, this.topPos + 0, 56, 20).build();
+		guistate.put("button:button_search", button_search);
+		this.addRenderableWidget(button_search);
 	}
 }

@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.mcreator.simpleeconomy.client.gui.ShopGUIScreen;
+import net.mcreator.simpleeconomy.client.gui.SearchGUIScreen;
 import net.mcreator.simpleeconomy.client.gui.OresScreen;
 import net.mcreator.simpleeconomy.client.gui.NetheriteScrapGUIScreen;
 import net.mcreator.simpleeconomy.client.gui.NetheriteScrapBuyGUIScreen;
@@ -22,6 +23,7 @@ import net.mcreator.simpleeconomy.client.gui.IronGUIScreen;
 import net.mcreator.simpleeconomy.client.gui.IronBuyGUIScreen;
 import net.mcreator.simpleeconomy.client.gui.GoldGUIScreen;
 import net.mcreator.simpleeconomy.client.gui.GoldBuyGUIScreen;
+import net.mcreator.simpleeconomy.client.gui.FoodGUIScreen;
 import net.mcreator.simpleeconomy.client.gui.EmeraldGUIScreen;
 import net.mcreator.simpleeconomy.client.gui.EmeraldBuyGUIScreen;
 import net.mcreator.simpleeconomy.client.gui.DiamondGUIScreen;
@@ -51,6 +53,8 @@ public class SimpleEconomyModScreens {
 			MenuScreens.register(SimpleEconomyModMenus.NETHERITE_SCRAP_BUY_GUI.get(), NetheriteScrapBuyGUIScreen::new);
 			MenuScreens.register(SimpleEconomyModMenus.NETHERITE_INGOT_GUI.get(), NetheriteIngotGUIScreen::new);
 			MenuScreens.register(SimpleEconomyModMenus.NETHERITE_INGOT_BUY_GUI.get(), NetheriteIngotBuyGUIScreen::new);
+			MenuScreens.register(SimpleEconomyModMenus.SEARCH_GUI.get(), SearchGUIScreen::new);
+			MenuScreens.register(SimpleEconomyModMenus.FOOD_GUI.get(), FoodGUIScreen::new);
 		});
 	}
 }

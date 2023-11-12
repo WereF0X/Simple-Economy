@@ -12,6 +12,7 @@ import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraft.world.inventory.MenuType;
 
 import net.mcreator.simpleeconomy.world.inventory.ShopGUIMenu;
+import net.mcreator.simpleeconomy.world.inventory.SearchGUIMenu;
 import net.mcreator.simpleeconomy.world.inventory.OresMenu;
 import net.mcreator.simpleeconomy.world.inventory.NetheriteScrapGUIMenu;
 import net.mcreator.simpleeconomy.world.inventory.NetheriteScrapBuyGUIMenu;
@@ -22,6 +23,7 @@ import net.mcreator.simpleeconomy.world.inventory.IronGUIMenu;
 import net.mcreator.simpleeconomy.world.inventory.IronBuyGUIMenu;
 import net.mcreator.simpleeconomy.world.inventory.GoldGUIMenu;
 import net.mcreator.simpleeconomy.world.inventory.GoldBuyGUIMenu;
+import net.mcreator.simpleeconomy.world.inventory.FoodGUIMenu;
 import net.mcreator.simpleeconomy.world.inventory.EmeraldGUIMenu;
 import net.mcreator.simpleeconomy.world.inventory.EmeraldBuyGUIMenu;
 import net.mcreator.simpleeconomy.world.inventory.DiamondGUIMenu;
@@ -49,4 +51,6 @@ public class SimpleEconomyModMenus {
 	public static final RegistryObject<MenuType<NetheriteScrapBuyGUIMenu>> NETHERITE_SCRAP_BUY_GUI = REGISTRY.register("netherite_scrap_buy_gui", () -> IForgeMenuType.create(NetheriteScrapBuyGUIMenu::new));
 	public static final RegistryObject<MenuType<NetheriteIngotGUIMenu>> NETHERITE_INGOT_GUI = REGISTRY.register("netherite_ingot_gui", () -> IForgeMenuType.create(NetheriteIngotGUIMenu::new));
 	public static final RegistryObject<MenuType<NetheriteIngotBuyGUIMenu>> NETHERITE_INGOT_BUY_GUI = REGISTRY.register("netherite_ingot_buy_gui", () -> IForgeMenuType.create(NetheriteIngotBuyGUIMenu::new));
+	public static final RegistryObject<MenuType<SearchGUIMenu>> SEARCH_GUI = REGISTRY.register("search_gui", () -> IForgeMenuType.create(SearchGUIMenu::new));
+	public static final RegistryObject<MenuType<FoodGUIMenu>> FOOD_GUI = REGISTRY.register("food_gui", () -> IForgeMenuType.create(FoodGUIMenu::new));
 }

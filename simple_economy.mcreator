@@ -1405,6 +1405,182 @@
           "src/main/java/net/mcreator/simpleeconomy/command/SimpleEconomyMaximumBalanceSetCommand.java"
         ]
       }
+    },
+    {
+      "name": "SearchEngine",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "search_engine",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/SearchEngineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SearchGUI",
+      "type": "gui",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "search_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/SearchGUIScreen.java",
+          "src/main/java/net/mcreator/simpleeconomy/network/SearchGUIButtonMessage.java",
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/SearchGUIMenu.java"
+        ]
+      }
+    },
+    {
+      "name": "OpenSearchGUI",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_search_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/OpenSearchGUIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FoodSlot0Set",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "food_slot_0_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/FoodSlot0SetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FoodGUI",
+      "type": "gui",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "food_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/network/FoodGUIButtonMessage.java",
+          "src/main/java/net/mcreator/simpleeconomy/world/inventory/FoodGUIMenu.java",
+          "src/main/java/net/mcreator/simpleeconomy/client/gui/FoodGUIScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "FoodSlot0Buy",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "food_slot_0_buy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/FoodSlot0BuyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Disable",
+      "type": "procedure",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "disable",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/DisableProcedure.java"
+        ],
+        "dependencies": []
+      }
     }
   ],
   "variable_elements": [
@@ -1427,24 +1603,28 @@
       "gui.simple_economy.netherite_scrap_gui.label_buy_price_7": "Buy price: 320$",
       "gui.simple_economy.gold_gui.label_sell_price_050": "Sell price: 3.4$",
       "gui.simple_economy.netherite_ingot_gui.label_buy_price_7": "Buy price: 1280$",
-      "gui.easy_economy.coal_buy_gui.button_buy_x64": "Buy x64",
+      "gui.simple_economy.shop_gui.button_search": "Search",
       "gui.simple_economy.coal_gui.button_back": "Back",
-      "gui.easy_economy.netherite_ingot_gui.button_back": "Back",
+      "gui.easy_economy.coal_buy_gui.button_buy_x64": "Buy x64",
       "gui.easy_economy.gold_gui.button_buy": "Buy",
+      "gui.easy_economy.netherite_ingot_gui.button_back": "Back",
       "gui.simple_economy.netherite_ingot_buy_gui.button_buy_x1": "Buy x1",
       "gui.simple_economy.gold_buy_gui.button_buy_x64": "Buy x64",
-      "gui.easy_economy.emerald_buy_gui.button_back": "Back",
       "gui.simple_economy.diamond_buy_gui.button_buy_x1": "Buy x1",
+      "gui.easy_economy.emerald_buy_gui.button_back": "Back",
       "gui.simple_economy.diamond_buy_gui.button_back": "Back",
       "gui.easy_economy.shop_gui.label_shop": "SHOP",
       "gui.easy_economy.shop_gui.button_balance": "Balance",
       "gui.simple_economy.emerald_gui.button_back": "Back",
       "gui.easy_economy.diamond_buy_gui.button_back": "Back",
       "gui.simple_economy.emerald_buy_gui.button_back": "Back",
+      "gui.simple_economy.shop_gui.Search": "Search",
+      "gui.simple_economy.search_gui.label_ores_only": "ORES only",
       "gui.simple_economy.coal_buy_gui.button_back": "Back",
-      "gui.simple_economy.iron_buy_gui.button_buy_x1": "Buy x1",
       "gui.simple_economy.emerald_gui.label_sell_price_050": "Sell price: 13$",
+      "gui.simple_economy.iron_buy_gui.button_buy_x1": "Buy x1",
       "gui.easy_economy.diamond_gui.label_buy_price_7": "Buy price: 200$",
+      "gui.simple_economy.search_gui.button_search": "Search",
       "gui.simple_economy.diamond_gui.label_buy_price_7": "Buy price: 200$",
       "gui.simple_economy.shop_gui.button_ores": "Ores",
       "gui.easy_economy.netherite_gui.button_back": "Back",
@@ -1476,6 +1656,7 @@
       "gui.simple_economy.emerald_buy_gui.button_buy_x64": "Buy x64",
       "gui.easy_economy.netherite_ingot_buy_gui.button_buy_x1": "Buy x1",
       "gui.simple_economy.netherite_scrap_gui.button_back": "Back",
+      "gui.simple_economy.food_gui.button_buy": "Buy",
       "gui.simple_economy.shop_gui.button_miscellaneous": "Miscellaneous",
       "gui.easy_economy.emerald_buy_gui.button_buy_x64": "Buy x64",
       "gui.easy_economy.netherite_scrap_buy_gui.button_buy_x1": "Buy x1",
@@ -1491,6 +1672,7 @@
       "gui.easy_economy.shop_gui.button_pvp": "PvP",
       "gui.simple_economy.ores.button_coal": "Coal",
       "gui.simple_economy.gold_buy_gui.button_back": "Back",
+      "gui.simple_economy.food_gui.amount": "Buy 64?",
       "gui.simple_economy.coal_gui.label_buy_price_7": "Buy price: 7$",
       "gui.simple_economy.netherite_scrap_buy_gui.button_buy_x1": "Buy x1",
       "gui.simple_economy.netherite_gui.button_netherite_ingot": "Netherite Ingot",
@@ -1505,6 +1687,7 @@
       "gui.simple_economy.diamond_buy_gui.button_buy_x64": "Buy x64",
       "gui.easy_economy.shop_gui.button_ores": "Ores",
       "gui.simple_economy.emerald_gui.label_buy_price_7": "Buy price: 61$",
+      "gui.simple_economy.search_gui.Search": "Search a category..",
       "gui.simple_economy.gold_gui.button_buy": "Buy",
       "gui.simple_economy.emerald_buy_gui.button_buy_x1": "Buy x1",
       "gui.easy_economy.netherite_gui.button_netherite_scrap": "Netherite Scrap",
@@ -1556,6 +1739,7 @@
       "gui.simple_economy.iron_gui.label_sell_price_050": "Sell price: 2.1$",
       "gui.easy_economy.netherite_scrap_gui.button_buy": "Buy",
       "gui.easy_economy.netherite_ingot_gui.label_sell_price_050": "Sell price: 200$",
+      "gui.simple_economy.food_gui.Amount": "Buy 64?",
       "gui.easy_economy.netherite_ingot_gui.button_buy": "Buy",
       "gui.simple_economy.iron_buy_gui.button_back": "Back",
       "gui.easy_economy.ores.button_diamond": "Diamond",
