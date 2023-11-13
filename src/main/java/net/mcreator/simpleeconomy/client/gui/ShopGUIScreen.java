@@ -29,6 +29,7 @@ public class ShopGUIScreen extends AbstractContainerScreen<ShopGUIMenu> {
 	Button button_food;
 	Button button_balance;
 	Button button_search;
+	Button button_auction_house;
 
 	public ShopGUIScreen(ShopGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -130,5 +131,13 @@ public class ShopGUIScreen extends AbstractContainerScreen<ShopGUIMenu> {
 		}).bounds(this.leftPos + 0, this.topPos + 0, 56, 20).build();
 		guistate.put("button:button_search", button_search);
 		this.addRenderableWidget(button_search);
+		button_auction_house = Button.builder(Component.translatable("gui.simple_economy.shop_gui.button_auction_house"), e -> {
+			if (true) {
+				SimpleEconomyMod.PACKET_HANDLER.sendToServer(new ShopGUIButtonMessage(7, x, y, z));
+				ShopGUIButtonMessage.handleButtonAction(entity, 7, x, y, z);
+			}
+		}).bounds(this.leftPos + 179, this.topPos + 146, 93, 20).build();
+		guistate.put("button:button_auction_house", button_auction_house);
+		this.addRenderableWidget(button_auction_house);
 	}
 }

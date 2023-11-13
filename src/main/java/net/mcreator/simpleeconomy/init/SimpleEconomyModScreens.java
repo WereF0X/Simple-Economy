@@ -31,6 +31,7 @@ import net.mcreator.simpleeconomy.client.gui.DiamondGUIScreen;
 import net.mcreator.simpleeconomy.client.gui.DiamondBuyGUIScreen;
 import net.mcreator.simpleeconomy.client.gui.CoalGUIScreen;
 import net.mcreator.simpleeconomy.client.gui.CoalBuyGUIScreen;
+import net.mcreator.simpleeconomy.client.gui.AuctionHouseScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class SimpleEconomyModScreens {
@@ -57,6 +58,7 @@ public class SimpleEconomyModScreens {
 			MenuScreens.register(SimpleEconomyModMenus.SEARCH_GUI.get(), SearchGUIScreen::new);
 			MenuScreens.register(SimpleEconomyModMenus.FOOD_GUI.get(), FoodGUIScreen::new);
 			MenuScreens.register(SimpleEconomyModMenus.FOOD_GUI_PAGE_2.get(), FoodGUIPage2Screen::new);
+			MenuScreens.register(SimpleEconomyModMenus.AUCTION_HOUSE.get(), AuctionHouseScreen::new);
 		});
 	}
 }

@@ -31,6 +31,7 @@ import net.mcreator.simpleeconomy.world.inventory.DiamondGUIMenu;
 import net.mcreator.simpleeconomy.world.inventory.DiamondBuyGUIMenu;
 import net.mcreator.simpleeconomy.world.inventory.CoalGUIMenu;
 import net.mcreator.simpleeconomy.world.inventory.CoalBuyGUIMenu;
+import net.mcreator.simpleeconomy.world.inventory.AuctionHouseMenu;
 import net.mcreator.simpleeconomy.SimpleEconomyMod;
 
 public class SimpleEconomyModMenus {
@@ -55,4 +56,5 @@ public class SimpleEconomyModMenus {
 	public static final RegistryObject<MenuType<SearchGUIMenu>> SEARCH_GUI = REGISTRY.register("search_gui", () -> IForgeMenuType.create(SearchGUIMenu::new));
 	public static final RegistryObject<MenuType<FoodGUIMenu>> FOOD_GUI = REGISTRY.register("food_gui", () -> IForgeMenuType.create(FoodGUIMenu::new));
 	public static final RegistryObject<MenuType<FoodGUIPage2Menu>> FOOD_GUI_PAGE_2 = REGISTRY.register("food_gui_page_2", () -> IForgeMenuType.create(FoodGUIPage2Menu::new));
+	public static final RegistryObject<MenuType<AuctionHouseMenu>> AUCTION_HOUSE = REGISTRY.register("auction_house", () -> IForgeMenuType.create(AuctionHouseMenu::new));
 }

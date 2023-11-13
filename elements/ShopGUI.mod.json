@@ -113,6 +113,20 @@
           "x": 77,
           "y": 37
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_auction_house",
+          "text": "Auction House",
+          "onClick": {
+            "name": "AuctionHouseOpen"
+          },
+          "width": 93,
+          "height": 20,
+          "x": 256,
+          "y": 183
+        }
       }
     ],
     "gridSettings": {

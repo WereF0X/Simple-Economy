@@ -19,6 +19,7 @@ import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
@@ -136,6 +137,12 @@ public class SimpleEconomyModVariables {
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "simple_economy_mapvars";
 		public double MaximumBalance = 10000.0;
+		public ItemStack AuctionHouseItem0 = ItemStack.EMPTY;
+		public double AuctionHouseItem0Price = 0;
+		public double AuctionHouseItem0Count = 0;
+		public ItemStack AuctionHouseItem1 = ItemStack.EMPTY;
+		public double AuctionHouseItem1Price = 0;
+		public double AuctionHouseItem1Count = 0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -145,11 +152,23 @@ public class SimpleEconomyModVariables {
 
 		public void read(CompoundTag nbt) {
 			MaximumBalance = nbt.getDouble("MaximumBalance");
+			AuctionHouseItem0 = ItemStack.of(nbt.getCompound("AuctionHouseItem0"));
+			AuctionHouseItem0Price = nbt.getDouble("AuctionHouseItem0Price");
+			AuctionHouseItem0Count = nbt.getDouble("AuctionHouseItem0Count");
+			AuctionHouseItem1 = ItemStack.of(nbt.getCompound("AuctionHouseItem1"));
+			AuctionHouseItem1Price = nbt.getDouble("AuctionHouseItem1Price");
+			AuctionHouseItem1Count = nbt.getDouble("AuctionHouseItem1Count");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putDouble("MaximumBalance", MaximumBalance);
+			nbt.put("AuctionHouseItem0", AuctionHouseItem0.save(new CompoundTag()));
+			nbt.putDouble("AuctionHouseItem0Price", AuctionHouseItem0Price);
+			nbt.putDouble("AuctionHouseItem0Count", AuctionHouseItem0Count);
+			nbt.put("AuctionHouseItem1", AuctionHouseItem1.save(new CompoundTag()));
+			nbt.putDouble("AuctionHouseItem1Price", AuctionHouseItem1Price);
+			nbt.putDouble("AuctionHouseItem1Count", AuctionHouseItem1Count);
 			return nbt;
 		}
 

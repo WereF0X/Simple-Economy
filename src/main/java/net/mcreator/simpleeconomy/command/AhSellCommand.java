@@ -9,18 +9,19 @@ import net.minecraftforge.common.util.FakePlayerFactory;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
-import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
-import net.mcreator.simpleeconomy.procedures.TellBalanceOnCommandProcedure;
+import net.mcreator.simpleeconomy.procedures.AuctionHouseSellItemProcedure;
+
+import com.mojang.brigadier.arguments.DoubleArgumentType;
 
 @Mod.EventBusSubscriber
-public class SimpleEcomomyBalanceCommand {
+public class AhSellCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("SimpleEconomy:balance")
+		event.getDispatcher().register(Commands.literal("ah:sell")
 
-				.then(Commands.argument("player", EntityArgument.player()).executes(arguments -> {
+				.then(Commands.argument("price", DoubleArgumentType.doubleArg(0.1)).executes(arguments -> {
 					ServerLevel world = arguments.getSource().getLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -30,7 +31,7 @@ public class SimpleEcomomyBalanceCommand {
 						entity = FakePlayerFactory.getMinecraft(world);
 					Direction direction = entity.getDirection();
 
-					TellBalanceOnCommandProcedure.execute(arguments, entity);
+					AuctionHouseSellItemProcedure.execute(world, x, y, z, arguments, entity);
 					return 0;
 				})));
 	}
