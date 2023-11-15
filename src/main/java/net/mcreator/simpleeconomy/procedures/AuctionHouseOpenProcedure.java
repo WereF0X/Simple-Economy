@@ -51,5 +51,17 @@ public class AuctionHouseOpenProcedure {
 			((Slot) _slots.get(1)).set(_setstack);
 			_player.containerMenu.broadcastChanges();
 		}
+		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			ItemStack _setstack = SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseItem1;
+			_setstack.setCount((int) SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseItem1Count);
+			((Slot) _slots.get(2)).set(_setstack);
+			_player.containerMenu.broadcastChanges();
+		}
+		if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+			ItemStack _setstack = SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseItem2;
+			_setstack.setCount((int) SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseItem2Count);
+			((Slot) _slots.get(3)).set(_setstack);
+			_player.containerMenu.broadcastChanges();
+		}
 	}
 }

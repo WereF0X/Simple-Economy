@@ -76,6 +76,74 @@
           "x": 171,
           "y": 50
         }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 3,
+          "disablePickup": {
+            "fixedValue": true
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 228,
+          "y": 51
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_buy2",
+          "text": "Buy",
+          "onClick": {
+            "name": "AuctionHouseBuySlot3"
+          },
+          "width": 40,
+          "height": 20,
+          "x": 253,
+          "y": 50
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_price",
+          "text": "Price",
+          "onClick": {
+            "name": "AuctionHouseSlot1TellPrice"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 64,
+          "y": 71
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_price1",
+          "text": "Price",
+          "onClick": {
+            "name": "AuctionHouseSlot2TellPrice"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 145,
+          "y": 71
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_price2",
+          "text": "Price",
+          "onClick": {
+            "name": "AuctionHouseSlot3TellPrice"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 227,
+          "y": 72
+        }
       }
     ],
     "gridSettings": {

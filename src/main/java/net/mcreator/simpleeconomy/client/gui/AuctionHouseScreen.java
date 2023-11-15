@@ -24,6 +24,10 @@ public class AuctionHouseScreen extends AbstractContainerScreen<AuctionHouseMenu
 	private final Player entity;
 	Button button_buy;
 	Button button_buy1;
+	Button button_buy2;
+	Button button_price;
+	Button button_price1;
+	Button button_price2;
 
 	public AuctionHouseScreen(AuctionHouseMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -97,5 +101,37 @@ public class AuctionHouseScreen extends AbstractContainerScreen<AuctionHouseMenu
 		}).bounds(this.leftPos + 109, this.topPos + 13, 40, 20).build();
 		guistate.put("button:button_buy1", button_buy1);
 		this.addRenderableWidget(button_buy1);
+		button_buy2 = Button.builder(Component.translatable("gui.simple_economy.auction_house.button_buy2"), e -> {
+			if (true) {
+				SimpleEconomyMod.PACKET_HANDLER.sendToServer(new AuctionHouseButtonMessage(2, x, y, z));
+				AuctionHouseButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		}).bounds(this.leftPos + 191, this.topPos + 13, 40, 20).build();
+		guistate.put("button:button_buy2", button_buy2);
+		this.addRenderableWidget(button_buy2);
+		button_price = Button.builder(Component.translatable("gui.simple_economy.auction_house.button_price"), e -> {
+			if (true) {
+				SimpleEconomyMod.PACKET_HANDLER.sendToServer(new AuctionHouseButtonMessage(3, x, y, z));
+				AuctionHouseButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		}).bounds(this.leftPos + 2, this.topPos + 34, 51, 20).build();
+		guistate.put("button:button_price", button_price);
+		this.addRenderableWidget(button_price);
+		button_price1 = Button.builder(Component.translatable("gui.simple_economy.auction_house.button_price1"), e -> {
+			if (true) {
+				SimpleEconomyMod.PACKET_HANDLER.sendToServer(new AuctionHouseButtonMessage(4, x, y, z));
+				AuctionHouseButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		}).bounds(this.leftPos + 83, this.topPos + 34, 51, 20).build();
+		guistate.put("button:button_price1", button_price1);
+		this.addRenderableWidget(button_price1);
+		button_price2 = Button.builder(Component.translatable("gui.simple_economy.auction_house.button_price2"), e -> {
+			if (true) {
+				SimpleEconomyMod.PACKET_HANDLER.sendToServer(new AuctionHouseButtonMessage(5, x, y, z));
+				AuctionHouseButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
+		}).bounds(this.leftPos + 165, this.topPos + 35, 51, 20).build();
+		guistate.put("button:button_price2", button_price2);
+		this.addRenderableWidget(button_price2);
 	}
 }

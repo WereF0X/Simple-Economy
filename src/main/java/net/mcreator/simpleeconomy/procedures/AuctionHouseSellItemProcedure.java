@@ -49,32 +49,43 @@ public class AuctionHouseSellItemProcedure {
 				}, _bpos);
 			}
 		}
-		if ((entity instanceof Player _plrSlotItem && _plrSlotItem.containerMenu instanceof Supplier _splr && _splr.get() instanceof Map _slt ? ((Slot) _slt.get(1)).getItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
+		if (SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseSlot0EMPTY == true) {
+			if (entity instanceof Player _player)
+				_player.closeContainer();
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
 				if (entity instanceof Player _player)
 					_player.closeContainer();
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal("Please select something to sell."), false);
 			} else {
-				SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseItem0Price = DoubleArgumentType.getDouble(arguments, "price");
-				SimpleEconomyModVariables.MapVariables.get(world).syncData(world);
-				SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseItem0Count = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount();
-				SimpleEconomyModVariables.MapVariables.get(world).syncData(world);
-				SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseItem0 = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
-				SimpleEconomyModVariables.MapVariables.get(world).syncData(world);
-				if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
-					ItemStack _setstack = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
-					_setstack.setCount((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount());
-					((Slot) _slots.get(1)).set(_setstack);
-					_player.containerMenu.broadcastChanges();
+				if (DoubleArgumentType.getDouble(arguments, "price") <= SimpleEconomyModVariables.MapVariables.get(world).MaximumBalance) {
+					SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseSlot0EMPTY = false;
+					SimpleEconomyModVariables.MapVariables.get(world).syncData(world);
+					SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseItem0Price = DoubleArgumentType.getDouble(arguments, "price");
+					SimpleEconomyModVariables.MapVariables.get(world).syncData(world);
+					SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseItem0Count = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount();
+					SimpleEconomyModVariables.MapVariables.get(world).syncData(world);
+					SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseItem0 = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
+					SimpleEconomyModVariables.MapVariables.get(world).syncData(world);
+					if (entity instanceof Player _player && _player.containerMenu instanceof Supplier _current && _current.get() instanceof Map _slots) {
+						ItemStack _setstack = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
+						_setstack.setCount((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount());
+						((Slot) _slots.get(1)).set(_setstack);
+						_player.containerMenu.broadcastChanges();
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _stktoremove = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
+						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount(),
+								_player.inventoryMenu.getCraftSlots());
+					}
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal(("You successfully sold the items for " + SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseItem0Price + "$")), false);
+					SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseSlot0Seller = entity.getDisplayName().getString();
+					SimpleEconomyModVariables.MapVariables.get(world).syncData(world);
+				} else {
+					if (entity instanceof Player _player && !_player.level().isClientSide())
+						_player.displayClientMessage(Component.literal(("The price you set is bigger than the maximum balance allowed. The maximum balance is " + SimpleEconomyModVariables.MapVariables.get(world).MaximumBalance + "$")), false);
 				}
-				if (entity instanceof Player _player) {
-					ItemStack _stktoremove = (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY);
-					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount(),
-							_player.inventoryMenu.getCraftSlots());
-				}
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(("You successfully sold the items for " + SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseItem0Price + "$")), false);
 			}
 		} else {
 			AuctionHouseSellItemSlot2Procedure.execute(world, x, y, z, arguments, entity);

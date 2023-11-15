@@ -1869,6 +1869,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -1962,6 +1974,186 @@
           "src/main/java/net/mcreator/simpleeconomy/command/SimpleEconomyAhSellCommand.java"
         ]
       }
+    },
+    {
+      "name": "AuctionHouseSellItemSlot3",
+      "type": "procedure",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auction_house_sell_item_slot_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/AuctionHouseSellItemSlot3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AuctionHouseBuySlot3",
+      "type": "procedure",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auction_house_buy_slot_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/AuctionHouseBuySlot3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AuctionHouseSlot1TellPrice",
+      "type": "procedure",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auction_house_slot_1_tell_price",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/AuctionHouseSlot1TellPriceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AuctionHouseSlot2TellPrice",
+      "type": "procedure",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auction_house_slot_2_tell_price",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/AuctionHouseSlot2TellPriceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AuctionHouseSlot3TellPrice",
+      "type": "procedure",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auction_house_slot_3_tell_price",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/AuctionHouseSlot3TellPriceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BalanceAdd",
+      "type": "procedure",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "balance_add",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/procedures/BalanceAddProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BalanceAddCommand",
+      "type": "command",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "balance_add_command",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/command/BalanceAddCommandCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "SimpleEconomyBalanceAdd",
+      "type": "command",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "simple_economy_balance_add",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/simpleeconomy/command/SimpleEconomyBalanceAddCommand.java"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1978,7 +2170,55 @@
       "value": "10000.0"
     },
     {
-      "name": "AuctionHouseItem0",
+      "name": "AuctionHouseSlot2EMPTY",
+      "type": "logic",
+      "scope": "map",
+      "value": "true"
+    },
+    {
+      "name": "AuctionHouseSlot1EMPTY",
+      "type": "logic",
+      "scope": "map",
+      "value": "true"
+    },
+    {
+      "name": "AuctionHouseSlot0EMPTY",
+      "type": "logic",
+      "scope": "map",
+      "value": "true"
+    },
+    {
+      "name": "AuctionHouseItem2Price",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "AuctionHouseItem2Count",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "AuctionHouseItem2",
+      "type": "itemstack",
+      "scope": "map",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "AuctionHouseItem1Price",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "AuctionHouseItem1Count",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "AuctionHouseItem1",
       "type": "itemstack",
       "scope": "map",
       "value": "ItemStack.EMPTY"
@@ -1996,22 +2236,16 @@
       "value": "0"
     },
     {
-      "name": "AuctionHouseItem1",
+      "name": "AuctionHouseItem0",
       "type": "itemstack",
       "scope": "map",
       "value": "ItemStack.EMPTY"
     },
     {
-      "name": "AuctionHouseItem1Price",
-      "type": "number",
+      "name": "AuctionHouseSlot0Seller",
+      "type": "string",
       "scope": "map",
-      "value": "0"
-    },
-    {
-      "name": "AuctionHouseItem1Count",
-      "type": "number",
-      "scope": "map",
-      "value": "0"
+      "value": "\"\""
     }
   ],
   "sound_elements": [],
@@ -2019,14 +2253,16 @@
     "en_us": {
       "gui.simple_economy.netherite_scrap_gui.label_buy_price_7": "Buy price: 320$",
       "gui.simple_economy.gold_gui.label_sell_price_050": "Sell price: 3.4$",
-      "gui.simple_economy.netherite_ingot_gui.label_buy_price_7": "Buy price: 1280$",
       "gui.simple_economy.shop_gui.button_search": "Search",
+      "gui.simple_economy.netherite_ingot_gui.label_buy_price_7": "Buy price: 1280$",
       "gui.simple_economy.coal_gui.button_back": "Back",
       "gui.easy_economy.coal_buy_gui.button_buy_x64": "Buy x64",
       "gui.simple_economy.food_gui.button_next_page": "Next Page",
       "gui.easy_economy.gold_gui.button_buy": "Buy",
       "gui.easy_economy.netherite_ingot_gui.button_back": "Back",
+      "gui.simple_economy.auction_house.button_price2": "Price",
       "gui.simple_economy.netherite_ingot_buy_gui.button_buy_x1": "Buy x1",
+      "gui.simple_economy.auction_house.button_price1": "Price",
       "gui.simple_economy.gold_buy_gui.button_buy_x64": "Buy x64",
       "gui.simple_economy.diamond_buy_gui.button_buy_x1": "Buy x1",
       "gui.easy_economy.emerald_buy_gui.button_back": "Back",
@@ -2101,6 +2337,7 @@
       "gui.simple_economy.food_gui.amount": "Buy 64?",
       "gui.simple_economy.coal_gui.label_buy_price_7": "Buy price: 7$",
       "gui.simple_economy.netherite_scrap_buy_gui.button_buy_x1": "Buy x1",
+      "gui.simple_economy.auction_house.button_buy2": "Buy",
       "gui.simple_economy.netherite_gui.button_netherite_ingot": "Netherite Ingot",
       "gui.simple_economy.auction_house.button_buy1": "Buy",
       "gui.simple_economy.gold_gui.label_buy_price_7": "Buy price: 20$",
@@ -2129,6 +2366,7 @@
       "gui.easy_economy.coal_gui.button_back": "Back",
       "gui.simple_economy.coal_gui.label_sell_price_050": "Sell price: 0.50$",
       "gui.simple_economy.netherite_scrap_buy_gui.button_buy_x64": "Buy x64",
+      "gui.simple_economy.auction_house.button_price": "Price",
       "gui.easy_economy.gold_gui.label_buy_price_7": "Buy price: 20$",
       "gui.simple_economy.auction_house.button_buy": "Buy",
       "gui.simple_economy.ores.button_netherite": "Netherite",

@@ -12,6 +12,10 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.simpleeconomy.world.inventory.AuctionHouseMenu;
+import net.mcreator.simpleeconomy.procedures.AuctionHouseSlot3TellPriceProcedure;
+import net.mcreator.simpleeconomy.procedures.AuctionHouseSlot2TellPriceProcedure;
+import net.mcreator.simpleeconomy.procedures.AuctionHouseSlot1TellPriceProcedure;
+import net.mcreator.simpleeconomy.procedures.AuctionHouseBuySlot3Procedure;
 import net.mcreator.simpleeconomy.procedures.AuctionHouseBuySlot2Procedure;
 import net.mcreator.simpleeconomy.procedures.AuctionHouseBuyProcedure;
 import net.mcreator.simpleeconomy.SimpleEconomyMod;
@@ -65,11 +69,27 @@ public class AuctionHouseButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			AuctionHouseBuyProcedure.execute(world, entity);
+			AuctionHouseBuyProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
 			AuctionHouseBuySlot2Procedure.execute(world, entity);
+		}
+		if (buttonID == 2) {
+
+			AuctionHouseBuySlot3Procedure.execute(world, entity);
+		}
+		if (buttonID == 3) {
+
+			AuctionHouseSlot1TellPriceProcedure.execute(world, entity);
+		}
+		if (buttonID == 4) {
+
+			AuctionHouseSlot2TellPriceProcedure.execute(world, entity);
+		}
+		if (buttonID == 5) {
+
+			AuctionHouseSlot3TellPriceProcedure.execute(world, entity);
 		}
 	}
 

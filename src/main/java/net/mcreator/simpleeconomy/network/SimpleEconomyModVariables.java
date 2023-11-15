@@ -137,12 +137,19 @@ public class SimpleEconomyModVariables {
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "simple_economy_mapvars";
 		public double MaximumBalance = 10000.0;
-		public ItemStack AuctionHouseItem0 = ItemStack.EMPTY;
-		public double AuctionHouseItem0Price = 0;
-		public double AuctionHouseItem0Count = 0;
-		public ItemStack AuctionHouseItem1 = ItemStack.EMPTY;
+		public boolean AuctionHouseSlot2EMPTY = true;
+		public boolean AuctionHouseSlot1EMPTY = true;
+		public boolean AuctionHouseSlot0EMPTY = true;
+		public double AuctionHouseItem2Price = 0;
+		public double AuctionHouseItem2Count = 0;
+		public ItemStack AuctionHouseItem2 = ItemStack.EMPTY;
 		public double AuctionHouseItem1Price = 0;
 		public double AuctionHouseItem1Count = 0;
+		public ItemStack AuctionHouseItem1 = ItemStack.EMPTY;
+		public double AuctionHouseItem0Price = 0;
+		public double AuctionHouseItem0Count = 0;
+		public ItemStack AuctionHouseItem0 = ItemStack.EMPTY;
+		public String AuctionHouseSlot0Seller = "\"\"";
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -152,23 +159,37 @@ public class SimpleEconomyModVariables {
 
 		public void read(CompoundTag nbt) {
 			MaximumBalance = nbt.getDouble("MaximumBalance");
-			AuctionHouseItem0 = ItemStack.of(nbt.getCompound("AuctionHouseItem0"));
-			AuctionHouseItem0Price = nbt.getDouble("AuctionHouseItem0Price");
-			AuctionHouseItem0Count = nbt.getDouble("AuctionHouseItem0Count");
-			AuctionHouseItem1 = ItemStack.of(nbt.getCompound("AuctionHouseItem1"));
+			AuctionHouseSlot2EMPTY = nbt.getBoolean("AuctionHouseSlot2EMPTY");
+			AuctionHouseSlot1EMPTY = nbt.getBoolean("AuctionHouseSlot1EMPTY");
+			AuctionHouseSlot0EMPTY = nbt.getBoolean("AuctionHouseSlot0EMPTY");
+			AuctionHouseItem2Price = nbt.getDouble("AuctionHouseItem2Price");
+			AuctionHouseItem2Count = nbt.getDouble("AuctionHouseItem2Count");
+			AuctionHouseItem2 = ItemStack.of(nbt.getCompound("AuctionHouseItem2"));
 			AuctionHouseItem1Price = nbt.getDouble("AuctionHouseItem1Price");
 			AuctionHouseItem1Count = nbt.getDouble("AuctionHouseItem1Count");
+			AuctionHouseItem1 = ItemStack.of(nbt.getCompound("AuctionHouseItem1"));
+			AuctionHouseItem0Price = nbt.getDouble("AuctionHouseItem0Price");
+			AuctionHouseItem0Count = nbt.getDouble("AuctionHouseItem0Count");
+			AuctionHouseItem0 = ItemStack.of(nbt.getCompound("AuctionHouseItem0"));
+			AuctionHouseSlot0Seller = nbt.getString("AuctionHouseSlot0Seller");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
 			nbt.putDouble("MaximumBalance", MaximumBalance);
-			nbt.put("AuctionHouseItem0", AuctionHouseItem0.save(new CompoundTag()));
-			nbt.putDouble("AuctionHouseItem0Price", AuctionHouseItem0Price);
-			nbt.putDouble("AuctionHouseItem0Count", AuctionHouseItem0Count);
-			nbt.put("AuctionHouseItem1", AuctionHouseItem1.save(new CompoundTag()));
+			nbt.putBoolean("AuctionHouseSlot2EMPTY", AuctionHouseSlot2EMPTY);
+			nbt.putBoolean("AuctionHouseSlot1EMPTY", AuctionHouseSlot1EMPTY);
+			nbt.putBoolean("AuctionHouseSlot0EMPTY", AuctionHouseSlot0EMPTY);
+			nbt.putDouble("AuctionHouseItem2Price", AuctionHouseItem2Price);
+			nbt.putDouble("AuctionHouseItem2Count", AuctionHouseItem2Count);
+			nbt.put("AuctionHouseItem2", AuctionHouseItem2.save(new CompoundTag()));
 			nbt.putDouble("AuctionHouseItem1Price", AuctionHouseItem1Price);
 			nbt.putDouble("AuctionHouseItem1Count", AuctionHouseItem1Count);
+			nbt.put("AuctionHouseItem1", AuctionHouseItem1.save(new CompoundTag()));
+			nbt.putDouble("AuctionHouseItem0Price", AuctionHouseItem0Price);
+			nbt.putDouble("AuctionHouseItem0Count", AuctionHouseItem0Count);
+			nbt.put("AuctionHouseItem0", AuctionHouseItem0.save(new CompoundTag()));
+			nbt.putString("AuctionHouseSlot0Seller", AuctionHouseSlot0Seller);
 			return nbt;
 		}
 
