@@ -1956,6 +1956,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -2029,6 +2041,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -2246,6 +2270,18 @@
       "type": "string",
       "scope": "map",
       "value": "\"\""
+    },
+    {
+      "name": "AuctionHouseSlot1Seller",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
+    },
+    {
+      "name": "AuctionHouseSlot2Seller",
+      "type": "string",
+      "scope": "map",
+      "value": "\"\""
     }
   ],
   "sound_elements": [],
@@ -2276,7 +2312,7 @@
       "gui.simple_economy.auction_house.label_sell_an_item": "Sell an item",
       "gui.simple_economy.emerald_buy_gui.button_back": "Back",
       "gui.simple_economy.shop_gui.Search": "Search",
-      "gui.simple_economy.search_gui.label_ores_only": "ORES only",
+      "gui.simple_economy.search_gui.label_ores_only": "ORES/MATERIALS only",
       "gui.simple_economy.coal_buy_gui.button_back": "Back",
       "gui.simple_economy.emerald_gui.label_sell_price_050": "Sell price: 13$",
       "gui.simple_economy.iron_buy_gui.button_buy_x1": "Buy x1",
@@ -2425,7 +2461,7 @@
   "workspaceSettings": {
     "modid": "simple_economy",
     "modName": "Simple Economy",
-    "version": "1.1.2",
+    "version": "1.3.1",
     "description": "Introduces a simple economy addon in your game. To sell items, do /sell. To buy items, do /shop. To see your balance, do /balance. Admins can do /balance:set (player) (amount) to set a player(s) balance to a  certain amount.",
     "author": "The_WereF0X",
     "websiteURL": "https://discord.gg/8gWbTqKuhF",

@@ -73,11 +73,11 @@ public class AuctionHouseButtonMessage {
 		}
 		if (buttonID == 1) {
 
-			AuctionHouseBuySlot2Procedure.execute(world, entity);
+			AuctionHouseBuySlot2Procedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
-			AuctionHouseBuySlot3Procedure.execute(world, entity);
+			AuctionHouseBuySlot3Procedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 3) {
 

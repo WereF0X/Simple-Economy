@@ -150,6 +150,8 @@ public class SimpleEconomyModVariables {
 		public double AuctionHouseItem0Count = 0;
 		public ItemStack AuctionHouseItem0 = ItemStack.EMPTY;
 		public String AuctionHouseSlot0Seller = "\"\"";
+		public String AuctionHouseSlot1Seller = "\"\"";
+		public String AuctionHouseSlot2Seller = "\"\"";
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -172,6 +174,8 @@ public class SimpleEconomyModVariables {
 			AuctionHouseItem0Count = nbt.getDouble("AuctionHouseItem0Count");
 			AuctionHouseItem0 = ItemStack.of(nbt.getCompound("AuctionHouseItem0"));
 			AuctionHouseSlot0Seller = nbt.getString("AuctionHouseSlot0Seller");
+			AuctionHouseSlot1Seller = nbt.getString("AuctionHouseSlot1Seller");
+			AuctionHouseSlot2Seller = nbt.getString("AuctionHouseSlot2Seller");
 		}
 
 		@Override
@@ -190,6 +194,8 @@ public class SimpleEconomyModVariables {
 			nbt.putDouble("AuctionHouseItem0Count", AuctionHouseItem0Count);
 			nbt.put("AuctionHouseItem0", AuctionHouseItem0.save(new CompoundTag()));
 			nbt.putString("AuctionHouseSlot0Seller", AuctionHouseSlot0Seller);
+			nbt.putString("AuctionHouseSlot1Seller", AuctionHouseSlot1Seller);
+			nbt.putString("AuctionHouseSlot2Seller", AuctionHouseSlot2Seller);
 			return nbt;
 		}
 

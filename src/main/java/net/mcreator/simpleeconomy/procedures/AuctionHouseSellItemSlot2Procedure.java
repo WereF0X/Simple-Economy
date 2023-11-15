@@ -80,6 +80,8 @@ public class AuctionHouseSellItemSlot2Procedure {
 					}
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal(("You successfully sold the items for " + SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseItem1Price + "$")), false);
+					SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseSlot1Seller = entity.getDisplayName().getString();
+					SimpleEconomyModVariables.MapVariables.get(world).syncData(world);
 				} else {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal(("The price you set is bigger than the maximum balance allowed. The maximum balance is " + SimpleEconomyModVariables.MapVariables.get(world).MaximumBalance + "$")), false);

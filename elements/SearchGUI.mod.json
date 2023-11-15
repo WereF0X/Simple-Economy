@@ -17,7 +17,7 @@
           "name": "Search",
           "width": 120,
           "height": 20,
-          "x": 118,
+          "x": 122,
           "y": 108
         }
       },
@@ -40,14 +40,14 @@
         "data": {
           "name": "label_ores_only",
           "text": {
-            "fixedValue": "ORES only"
+            "fixedValue": "ORES/MATERIALS only"
           },
           "color": {
             "value": -65536,
             "falpha": 0.0
           },
-          "x": 194,
-          "y": 128
+          "x": 172,
+          "y": 131
         }
       }
     ],

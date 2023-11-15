@@ -80,11 +80,16 @@ public class AuctionHouseSellItemSlot3Procedure {
 					}
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal(("You successfully sold the items for " + SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseItem2Price + "$")), false);
+					SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseSlot2Seller = entity.getDisplayName().getString();
+					SimpleEconomyModVariables.MapVariables.get(world).syncData(world);
 				} else {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal(("The price you set is bigger than the maximum balance allowed. The maximum balance is " + SimpleEconomyModVariables.MapVariables.get(world).MaximumBalance + "$")), false);
 				}
 			}
+		} else {
+			if (entity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(Component.literal("Sorry, the auction house is full. Please wait until Simple Economy next release to have more slots."), false);
 		}
 	}
 }

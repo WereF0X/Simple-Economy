@@ -75,7 +75,7 @@ public class SearchGUIScreen extends AbstractContainerScreen<SearchGUIMenu> {
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.simple_economy.search_gui.label_ores_only"), 82, 29, -65536, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.simple_economy.search_gui.label_ores_only"), 60, 32, -65536, false);
 	}
 
 	@Override
@@ -86,7 +86,7 @@ public class SearchGUIScreen extends AbstractContainerScreen<SearchGUIMenu> {
 	@Override
 	public void init() {
 		super.init();
-		Search = new EditBox(this.font, this.leftPos + 6, this.topPos + 9, 120, 20, Component.translatable("gui.simple_economy.search_gui.Search")) {
+		Search = new EditBox(this.font, this.leftPos + 10, this.topPos + 9, 120, 20, Component.translatable("gui.simple_economy.search_gui.Search")) {
 			{
 				setSuggestion(Component.translatable("gui.simple_economy.search_gui.Search").getString());
 			}

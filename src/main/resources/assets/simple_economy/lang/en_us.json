@@ -24,7 +24,7 @@
   "gui.simple_economy.auction_house.label_sell_an_item": "Sell an item",
   "gui.simple_economy.emerald_buy_gui.button_back": "Back",
   "gui.simple_economy.shop_gui.Search": "Search",
-  "gui.simple_economy.search_gui.label_ores_only": "ORES only",
+  "gui.simple_economy.search_gui.label_ores_only": "ORES/MATERIALS only",
   "gui.simple_economy.coal_buy_gui.button_back": "Back",
   "gui.simple_economy.emerald_gui.label_sell_price_050": "Sell price: 13$",
   "gui.simple_economy.iron_buy_gui.button_buy_x1": "Buy x1",
