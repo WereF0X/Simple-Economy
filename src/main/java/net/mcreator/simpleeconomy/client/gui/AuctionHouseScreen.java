@@ -10,6 +10,7 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.simpleeconomy.world.inventory.AuctionHouseMenu;
+import net.mcreator.simpleeconomy.procedures.PriceDisplayOverlayAhProcedure;
 import net.mcreator.simpleeconomy.network.AuctionHouseButtonMessage;
 import net.mcreator.simpleeconomy.SimpleEconomyMod;
 
@@ -47,6 +48,8 @@ public class AuctionHouseScreen extends AbstractContainerScreen<AuctionHouseMenu
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 36 && mouseX < leftPos + 60 && mouseY > topPos + 11 && mouseY < topPos + 35)
+			guiGraphics.renderTooltip(font, Component.literal(PriceDisplayOverlayAhProcedure.execute(world)), mouseX, mouseY);
 	}
 
 	@Override
@@ -90,7 +93,7 @@ public class AuctionHouseScreen extends AbstractContainerScreen<AuctionHouseMenu
 				SimpleEconomyMod.PACKET_HANDLER.sendToServer(new AuctionHouseButtonMessage(0, x, y, z));
 				AuctionHouseButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 27, this.topPos + 13, 40, 20).build();
+		}).bounds(this.leftPos + 28, this.topPos + 13, 40, 20).build();
 		guistate.put("button:button_buy", button_buy);
 		this.addRenderableWidget(button_buy);
 		button_buy1 = Button.builder(Component.translatable("gui.simple_economy.auction_house.button_buy1"), e -> {
@@ -114,7 +117,7 @@ public class AuctionHouseScreen extends AbstractContainerScreen<AuctionHouseMenu
 				SimpleEconomyMod.PACKET_HANDLER.sendToServer(new AuctionHouseButtonMessage(3, x, y, z));
 				AuctionHouseButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
-		}).bounds(this.leftPos + 2, this.topPos + 34, 51, 20).build();
+		}).bounds(this.leftPos + 4, this.topPos + 144, 51, 20).build();
 		guistate.put("button:button_price", button_price);
 		this.addRenderableWidget(button_price);
 		button_price1 = Button.builder(Component.translatable("gui.simple_economy.auction_house.button_price1"), e -> {

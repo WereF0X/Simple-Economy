@@ -55,6 +55,9 @@
         "data": {
           "name": "button_pvp",
           "text": "PvP",
+          "onClick": {
+            "name": "PvPSlot0Set"
+          },
           "width": 40,
           "height": 20,
           "x": 277,

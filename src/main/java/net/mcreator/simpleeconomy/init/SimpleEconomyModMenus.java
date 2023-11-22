@@ -13,6 +13,7 @@ import net.minecraft.world.inventory.MenuType;
 
 import net.mcreator.simpleeconomy.world.inventory.ShopGUIMenu;
 import net.mcreator.simpleeconomy.world.inventory.SearchGUIMenu;
+import net.mcreator.simpleeconomy.world.inventory.PvPGUIMenu;
 import net.mcreator.simpleeconomy.world.inventory.OresMenu;
 import net.mcreator.simpleeconomy.world.inventory.NetheriteScrapGUIMenu;
 import net.mcreator.simpleeconomy.world.inventory.NetheriteScrapBuyGUIMenu;
@@ -57,4 +58,5 @@ public class SimpleEconomyModMenus {
 	public static final RegistryObject<MenuType<FoodGUIMenu>> FOOD_GUI = REGISTRY.register("food_gui", () -> IForgeMenuType.create(FoodGUIMenu::new));
 	public static final RegistryObject<MenuType<FoodGUIPage2Menu>> FOOD_GUI_PAGE_2 = REGISTRY.register("food_gui_page_2", () -> IForgeMenuType.create(FoodGUIPage2Menu::new));
 	public static final RegistryObject<MenuType<AuctionHouseMenu>> AUCTION_HOUSE = REGISTRY.register("auction_house", () -> IForgeMenuType.create(AuctionHouseMenu::new));
+	public static final RegistryObject<MenuType<PvPGUIMenu>> PV_PGUI = REGISTRY.register("pv_pgui", () -> IForgeMenuType.create(PvPGUIMenu::new));
 }

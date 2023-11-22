@@ -11,44 +11,42 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.simpleeconomy.world.inventory.ShopGUIMenu;
-import net.mcreator.simpleeconomy.procedures.TellMoneyProcedure;
-import net.mcreator.simpleeconomy.procedures.PvPSlot0SetProcedure;
-import net.mcreator.simpleeconomy.procedures.OpenSearchGUIProcedure;
-import net.mcreator.simpleeconomy.procedures.OpenOresGUIProcedure;
-import net.mcreator.simpleeconomy.procedures.FoodSlot0SetProcedure;
-import net.mcreator.simpleeconomy.procedures.AuctionHouseOpenProcedure;
+import net.mcreator.simpleeconomy.world.inventory.PvPGUIMenu;
+import net.mcreator.simpleeconomy.procedures.ShopProcedureProcedure;
+import net.mcreator.simpleeconomy.procedures.PvPSlot0BuyProcedure;
+import net.mcreator.simpleeconomy.procedures.FoodSlot1BuyProcedure;
+import net.mcreator.simpleeconomy.procedures.FoodGUIPage2SetProcedure;
 import net.mcreator.simpleeconomy.SimpleEconomyMod;
 
 import java.util.function.Supplier;
 import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ShopGUIButtonMessage {
+public class PvPGUIButtonMessage {
 	private final int buttonID, x, y, z;
 
-	public ShopGUIButtonMessage(FriendlyByteBuf buffer) {
+	public PvPGUIButtonMessage(FriendlyByteBuf buffer) {
 		this.buttonID = buffer.readInt();
 		this.x = buffer.readInt();
 		this.y = buffer.readInt();
 		this.z = buffer.readInt();
 	}
 
-	public ShopGUIButtonMessage(int buttonID, int x, int y, int z) {
+	public PvPGUIButtonMessage(int buttonID, int x, int y, int z) {
 		this.buttonID = buttonID;
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 
-	public static void buffer(ShopGUIButtonMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(PvPGUIButtonMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}
 
-	public static void handler(ShopGUIButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(PvPGUIButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			Player entity = context.getSender();
@@ -63,38 +61,30 @@ public class ShopGUIButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
-		HashMap guistate = ShopGUIMenu.guistate;
+		HashMap guistate = PvPGUIMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
 		if (buttonID == 0) {
 
-			OpenOresGUIProcedure.execute(world, x, y, z, entity);
+			PvPSlot0BuyProcedure.execute(world, entity);
+		}
+		if (buttonID == 1) {
+
+			FoodSlot1BuyProcedure.execute(entity, guistate);
 		}
 		if (buttonID == 2) {
 
-			PvPSlot0SetProcedure.execute(world, x, y, z, entity);
+			ShopProcedureProcedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 4) {
+		if (buttonID == 3) {
 
-			FoodSlot0SetProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 5) {
-
-			TellMoneyProcedure.execute(entity);
-		}
-		if (buttonID == 6) {
-
-			OpenSearchGUIProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 7) {
-
-			AuctionHouseOpenProcedure.execute(world, x, y, z, entity);
+			FoodGUIPage2SetProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		SimpleEconomyMod.addNetworkMessage(ShopGUIButtonMessage.class, ShopGUIButtonMessage::buffer, ShopGUIButtonMessage::new, ShopGUIButtonMessage::handler);
+		SimpleEconomyMod.addNetworkMessage(PvPGUIButtonMessage.class, PvPGUIButtonMessage::buffer, PvPGUIButtonMessage::new, PvPGUIButtonMessage::handler);
 	}
 }

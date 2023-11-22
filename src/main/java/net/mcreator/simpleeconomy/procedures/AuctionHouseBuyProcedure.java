@@ -59,6 +59,8 @@ public class AuctionHouseBuyProcedure {
 						("/tellraw " + SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseSlot0Seller + " {\"text\":\"Your item was purchased in the auction house!\",\"color\":\"white\"}"));
 			SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseItem0Price = 0;
 			SimpleEconomyModVariables.MapVariables.get(world).syncData(world);
+			SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseSlot0Seller = "";
+			SimpleEconomyModVariables.MapVariables.get(world).syncData(world);
 		} else {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal(("You don't have enough money! Item price is " + SimpleEconomyModVariables.MapVariables.get(world).AuctionHouseItem0Price + "$")), false);

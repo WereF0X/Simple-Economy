@@ -152,6 +152,7 @@ public class SimpleEconomyModVariables {
 		public String AuctionHouseSlot0Seller = "\"\"";
 		public String AuctionHouseSlot1Seller = "\"\"";
 		public String AuctionHouseSlot2Seller = "\"\"";
+		public ItemStack PvPSlot0 = ItemStack.EMPTY;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -176,6 +177,7 @@ public class SimpleEconomyModVariables {
 			AuctionHouseSlot0Seller = nbt.getString("AuctionHouseSlot0Seller");
 			AuctionHouseSlot1Seller = nbt.getString("AuctionHouseSlot1Seller");
 			AuctionHouseSlot2Seller = nbt.getString("AuctionHouseSlot2Seller");
+			PvPSlot0 = ItemStack.of(nbt.getCompound("PvPSlot0"));
 		}
 
 		@Override
@@ -196,6 +198,7 @@ public class SimpleEconomyModVariables {
 			nbt.putString("AuctionHouseSlot0Seller", AuctionHouseSlot0Seller);
 			nbt.putString("AuctionHouseSlot1Seller", AuctionHouseSlot1Seller);
 			nbt.putString("AuctionHouseSlot2Seller", AuctionHouseSlot2Seller);
+			nbt.put("PvPSlot0", PvPSlot0.save(new CompoundTag()));
 			return nbt;
 		}
 

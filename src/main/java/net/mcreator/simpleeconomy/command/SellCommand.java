@@ -29,7 +29,7 @@ public class SellCommand {
 						entity = FakePlayerFactory.getMinecraft(world);
 					Direction direction = entity.getDirection();
 
-					SellProcedureProcedure.execute(entity);
+					SellProcedureProcedure.execute(world, x, y, z, entity);
 					return 0;
 				}));
 	}

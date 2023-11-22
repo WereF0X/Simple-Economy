@@ -47,7 +47,7 @@
           },
           "width": 40,
           "height": 20,
-          "x": 89,
+          "x": 90,
           "y": 50
         }
       },
@@ -113,8 +113,8 @@
           },
           "width": 51,
           "height": 20,
-          "x": 64,
-          "y": 71
+          "x": 66,
+          "y": 181
         }
       },
       {
@@ -143,6 +143,20 @@
           "height": 20,
           "x": 227,
           "y": 72
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_proc_price_display_overlay_ah",
+          "text": {
+            "fixedValue": "",
+            "name": "PriceDisplayOverlayAh"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 98,
+          "y": 48
         }
       }
     ],

@@ -100,6 +100,10 @@ public class ShopGUIScreen extends AbstractContainerScreen<ShopGUIMenu> {
 		guistate.put("button:button_blocks", button_blocks);
 		this.addRenderableWidget(button_blocks);
 		button_pvp = Button.builder(Component.translatable("gui.simple_economy.shop_gui.button_pvp"), e -> {
+			if (true) {
+				SimpleEconomyMod.PACKET_HANDLER.sendToServer(new ShopGUIButtonMessage(2, x, y, z));
+				ShopGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
 		}).bounds(this.leftPos + 200, this.topPos + 48, 40, 20).build();
 		guistate.put("button:button_pvp", button_pvp);
 		this.addRenderableWidget(button_pvp);

@@ -13,6 +13,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.mcreator.simpleeconomy.client.gui.ShopGUIScreen;
 import net.mcreator.simpleeconomy.client.gui.SearchGUIScreen;
+import net.mcreator.simpleeconomy.client.gui.PvPGUIScreen;
 import net.mcreator.simpleeconomy.client.gui.OresScreen;
 import net.mcreator.simpleeconomy.client.gui.NetheriteScrapGUIScreen;
 import net.mcreator.simpleeconomy.client.gui.NetheriteScrapBuyGUIScreen;
@@ -59,6 +60,7 @@ public class SimpleEconomyModScreens {
 			MenuScreens.register(SimpleEconomyModMenus.FOOD_GUI.get(), FoodGUIScreen::new);
 			MenuScreens.register(SimpleEconomyModMenus.FOOD_GUI_PAGE_2.get(), FoodGUIPage2Screen::new);
 			MenuScreens.register(SimpleEconomyModMenus.AUCTION_HOUSE.get(), AuctionHouseScreen::new);
+			MenuScreens.register(SimpleEconomyModMenus.PV_PGUI.get(), PvPGUIScreen::new);
 		});
 	}
 }
